@@ -1,5 +1,5 @@
 ---
-title: "Gradle과 SpringBoot... 멀티 모듈!"
+title: "Gradle? 멀티 모듈!"
 date: "2021-01-20T07:26:03.284Z"
 description: "project with SpringBoot"
 categories: [paragraph, feature photo]
@@ -12,7 +12,11 @@ creditlink: https://unsplash.com/photos/oMpAz-DN-9I
 
 ###멀티 모듈
 IntelliJ를 시작하고 gradle로 프로젝트를 생성하고 SpringBoot로 프로젝트 개발 환경을 바꿔주고..
-각 단계를 진행할 때마다 그래서 얘네를 쓰면 뭐가 좋은데?라는 의구심이 들었고, 지금부터 그 의구심을 풀어헤쳐 보도록 하겠습니다.
+
+이것저것 개발 환경을 바꿀 때 마다 이게 뭐길래 이걸로 하는걸까?싶었고
+
+그 첫 번째 관문에서 마주친 것이 바로 gradle.
+
 
 ## Gradle
 

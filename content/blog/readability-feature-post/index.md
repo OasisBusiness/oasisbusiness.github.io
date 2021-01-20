@@ -1,50 +1,257 @@
 ---
-title: "XXX"
-date: "2020-07-27T07:26:03.284Z"
-description: "Custom written post descriptions are the way to go... if you're not lazy."
+title: "Gradle과 SpringBoot... 멀티 모듈!"
+date: "2021-01-20T07:26:03.284Z"
+description: "project with SpringBoot"
 categories: [paragraph, feature photo]
 comments: true
 image:
-  feature: https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250
-  credit: Greg Rakozy
-  creditlink: https://unsplash.com/photos/oMpAz-DN-9I
+feature: https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250
+credit: Greg Rakozy
+creditlink: https://unsplash.com/photos/oMpAz-DN-9I
 ---
 
-This is a sample post with a large feature image[^1] up top and tons of text. Odio ad blue bottle vinyl, 90's narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney's. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.
+###멀티 모듈
+IntelliJ를 시작하고 gradle로 프로젝트를 생성하고 SpringBoot로 프로젝트 개발 환경을 바꿔주고..
+각 단계를 진행할 때마다 그래서 얘네를 쓰면 뭐가 좋은데?라는 의구심이 들었고, 지금부터 그 의구심을 풀어헤쳐 보도록 하겠습니다.
 
-Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.
+## Gradle
 
-## Cupidatat 90's lo-fi authentic try-hard
+다중 프로젝트로 구성된 서비스에서 각 서버들마다 _공통으로 존재하는 클래스들_ 을 효율적으로 다뤄주 것이 바로,
+**Gradle Multi Module** 방식입니다.
 
-In pug Portland incididunt mlkshk put a bird on it vinyl quinoa. Terry Richardson shabby chic +1, scenester Tonx excepteur tempor fugiat voluptate fingerstache aliquip nisi next level. Farm-to-table hashtag Truffaut, Odd Future ex meggings gentrify single-origin coffee try-hard 90's.
+각 서버에 동일한 클래스가 존재한다하여 그저 복사 붙여넣기에 의존하다가는 프로젝트의 규모가 커질경우
+감당하기 힘든 수정의 늪에 빠지게 될 수 있습니다.
+실수 또한 피할 수 없겠죠
 
-- Sartorial hoodie
-- Labore viral forage
-- Tote bag selvage
-- DIY exercitation et id ugh tumblr church-key
+그래서 복사 붙여넣기로 모든 서버에 동일 클래스를 존재시키는 것이 아니라
+공통 클래스를 한 번만 생성하여 사용할 수 있도록 프로젝트를 구성합니다.
+즉, 공통 프로젝트를 **모듈**화하여 프로젝트 안에 갖고 있는 구조입니다.
 
-Incididunt umami sriracha, ethical fugiat VHS ex assumenda yr irure direct trade. Marfa Truffaut bicycle rights, kitsch placeat Etsy kogi asymmetrical. Beard locavore flexitarian, kitsch photo booth hoodie plaid ethical readymade leggings yr.
+***
+이 때 개발시와 빌드시 만족해야 할 조건이 있습니다.
+- 개발시에는 즉각적으로 공통 프로젝트 코드 사용이 용이[^1]
+- 빌드시에는 자동으로 공통 프로젝트를 포함하여 빌드 진행[^2]
+***
 
-Aesthetic odio dolore, meggings disrupt qui readymade stumptown brunch Terry Richardson pour-over gluten-free. Banksy american apparel in selfies, biodiesel flexitarian organic meh wolf quinoa gentrify banjo kogi. Readymade tofu ex, scenester dolor umami fingerstache occaecat fashion axe Carles jean shorts minim. Keffiyeh fashion axe nisi Godard mlkshk dolore. Lomo you probably haven't heard of them eu non, Odd Future Truffaut pug keytar meggings McSweeney's Pinterest cred. Etsy literally aute esse, eu bicycle rights qui meggings fanny pack. Gentrify leggings pug flannel duis.
+##멀티 모듈 설계[^1]
 
-## Forage occaecat cardigan qui
+###구조
 
-Fashion axe hella gastropub lo-fi kogi 90's aliquip +1 veniam delectus tousled. Cred sriracha locavore gastropub kale chips, iPhone mollit sartorial. Anim dolore 8-bit, pork belly dolor photo booth aute flannel small batch. Dolor disrupt ennui, tattooed whatever salvia Banksy sartorial roof party selfies raw denim sint meh pour-over. Ennui eu cardigan sint, gentrify iPhone cornhole.
+![projServe](projServe.png)
+######프로젝트 구조 예시
+사용자와 접하는 서버: WEB 프로젝트
+DB와 접하는 서버: API 프로젝트
+공통으로 사용할 프로젝트: COMMON 프로젝트
 
-> Whatever velit occaecat quis deserunt gastropub, leggings elit tousled roof party 3 wolf moon kogi pug blue bottle ea. Fashion axe shabby chic Austin quinoa pickled laborum bitters next level, disrupt deep v accusamus non fingerstache.
+#
 
-Tote bag asymmetrical elit sunt. Occaecat authentic Marfa, hella McSweeney's next level irure veniam master cleanse. Sed hoodie letterpress artisan wolf leggings, 3 wolf moon commodo ullamco. Anim occupy ea labore Terry Richardson. Tofu ex master cleanse in whatever pitchfork banh mi, occupy fugiat fanny pack Austin authentic. Magna fugiat 3 wolf moon, labore McSweeney's sustainable vero consectetur. Gluten-free disrupt enim, aesthetic fugiat jean shorts trust fund keffiyeh magna try-hard.
+root 프로젝트 하위에 각 프로젝트(모듈)를 생성합니다.
 
-## Hoodie Duis
+> **multi-modules** / module-api, module-web, module-common
+>> module-common: 공통 프로젝트
 
-Actually salvia consectetur, hoodie duis lomo YOLO sunt sriracha. Aute pop-up brunch farm-to-table odio, salvia irure occaecat. Sriracha small batch literally skateboard. Echo Park nihil hoodie, aliquip forage artisan laboris. Trust fund reprehenderit nulla locavore. Stumptown raw denim kitsch, keffiyeh nulla twee dreamcatcher fanny pack ullamco 90's pop-up est culpa farm-to-table. Selfies 8-bit do pug odio.
+이 때 root 프로젝트를 기준으로 빌드가 이루어지기 때문에 하위 프로젝트에는
+gradle폴더나 redlew등의 파일이 없고 build.gradle과 src폴더만 존재한다는 점을 인지합니다.
 
-### Thundercats Ho!
 
-Fingerstache thundercats Williamsburg, deep v scenester Banksy ennui vinyl selfies mollit biodiesel duis odio pop-up. Banksy 3 wolf moon try-hard, sapiente enim stumptown deep v ad letterpress. Squid beard brunch, exercitation raw denim yr sint direct trade. Raw denim narwhal id, flannel DIY McSweeney's seitan. Letterpress artisan bespoke accusamus, meggings laboris consequat Truffaut qui in seitan. Sustainable cornhole Schlitz, twee Cosby sweater banh mi deep v forage letterpress flannel whatever keffiyeh. Sartorial cred irure, semiotics ethical sed blue bottle nihil letterpress.
+###module-common
+공통으로 사용 될 파일들을 생성합니다.
+**module-common/java/com/code/domain/Member.java**
+```
+@Entity
+public class Member {
+    @Id
+    @GeneratedValue
+    private Long id;
 
-Occupy et selvage squid, pug brunch blog nesciunt hashtag mumblecore skateboard yr kogi. Ugh small batch swag four loko. Fap post-ironic qui tote bag farm-to-table american apparel scenester keffiyeh vero, swag non pour-over gentrify authentic pitchfork. Schlitz scenester lo-fi voluptate, tote bag irony bicycle rights pariatur vero Vice freegan wayfarers exercitation nisi shoreditch. Chambray tofu vero sed. Street art swag literally leggings, Cosby sweater mixtape PBR lomo Banksy non in pitchfork ennui McSweeney's selfies. Odd Future Banksy non authentic.
+    @Column
+    private String name;
 
-Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.
+    @Column
+    private String email;
 
-[^1]: Texture image courtesty of [Lovetextures](http://www.lovetextures.com/)
+    public Member() {
+    }
+
+    public Member(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+}
+```
+
+**module-common/java/com/code/repository/MemberRepository.java**
+```
+public interface MemberRepository extends JpaRepository<Member, Long> {
+}
+```
+
+**module-common/build.gradle**
+```
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    runtime('com.h2database:h2')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+```
+######작성한 Entity 클래스와 해당 Entity 의 repository, repository test를 위한 최소한의 의존성 추가
+#
+
+---
+###module-api
+module-common의 클래스들을 사용
+**module-api/java/MemberServiceCustom.java**
+```
+@Service
+public class MemberServiceCustom {
+
+    private MemberRepository memberRepository;
+
+    public MemberServiceCustom(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
+    public Long signup (Member member) {
+        return memberRepository.save(member).getId();
+    }
+}
+```
+######MemberRepository의 bean injection 사용
+#
+**module-api/build.gradle**
+```
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+```
+######의존성 추가
+
+#
+
+---
+
+###root 프로젝트의 settings.gradle
+####module-api가 공통 프로젝트를 사용할 수 있고 spring boot 관련 의존성이 관리 되도록
+
+#
+
+**multi-modules/settings.gradle**
+```
+rootProject.name = 'multi-modules'
+
+include 'module-common', 'module-api', 'module-web'
+```
+######multi-modules가 module-common, module-api-module-web을 관리한다는 정의
+
+
+**multi-modules/gradle.build**
+```
+buildscript {
+    ext {
+        springBootVersion = '1.5.1.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath "io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE"
+    }
+}
+
+subprojects {
+    group 'com.blogcode'
+    version '1.0'
+
+    apply plugin: 'java'
+    apply plugin: 'spring-boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+}
+
+project(':module-api') {
+    dependencies {
+        compile project(':module-common')
+    }
+}
+
+project(':module-web') {
+    dependencies {
+        compile project(':module-common')
+    }
+}
+```
+######subprojects와 project()
+
+###subprojects
+settings.gradle에서 정의해둔 하위 프로젝트들을 관리합니다.
+
+하위 프로젝트들의 의존성과 관련된 plugin을 등록합니다. ex)SpringBoot, Java
+
+_root 프로젝트의 의존성까지 관리하고자 하면 allprojects로 관리합니다._
+
+###project
+```
+project(':하위 프로젝트 명') {
+  dependencies {
+    complie project(':의존하고있는 공통 프로젝트 명')
+    }
+  }
+```
+###### _:_ 디렉토리 path 표시
+
+
+###👉🏻멀티 모듈 구조 완성!
+
+[^2]: 멀티 모듈 빌드
+
+위에서 얘기했던 멀티 모듈 빌드시 만족 조건을 기억하시나요?
+>빌드시에는 자동으로 공통 프로젝트를 포함하여 빌드 진행
+
+하지만 코드를 살펴보면 module-common에는 main메소드가 없기 때문에 프로젝트 빌드에 실패하게됩니다.
+######단순한 참조용 클래스: jar형태로 만들 수 없음
+
+###gradle에서 제공하는 bootRepackage.enabled
+**module-common/build.gradle에 추가**
+```
+bootRepackage {
+    enabled = false
+}
+```
+
+**스프링 부트 2.0 이상**
+```
+bootJar { enabled = false }
+jar { enabled = true }
+```
+
+
+
+#
+
+이로써 빌드까지 완벽히 가능한, 멀티 모듈 구조를 알아보고 함께 작성까지 해보았습니다!
+멀티 모듈 구조를 이용하려는 분들에게 유용한 자료가 됐길 바랍니다.
+
+감사합니다.

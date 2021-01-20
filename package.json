@@ -39,7 +39,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.0",
+    "gh-pages": "^2.2.0",
     "prettier": "2.0.5",
     "tailwindcss": "^1.6.2"
   },
@@ -61,6 +61,6 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests!\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "deploy": "gatsby build && gh-pages -d public -b main"
   }
 }

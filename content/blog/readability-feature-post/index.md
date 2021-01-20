@@ -29,29 +29,31 @@ IntelliJ를 시작하고 gradle로 프로젝트를 생성하고 SpringBoot로 �
 
 ***
 이 때 개발시와 빌드시 만족해야 할 조건이 있습니다.
-- 개발시에는 즉각적으로 공통 프로젝트 코드 사용이 용이[^1]
-- 빌드시에는 자동으로 공통 프로젝트를 포함하여 빌드 진행[^2]
+- 개발시에는 즉각적으로 공통 프로젝트 코드 사용이 용이
+- 빌드시에는 자동으로 공통 프로젝트를 포함하여 빌드 진행
 ***
 
-##멀티 모듈 설계[^1]
+##멀티 모듈 설계
 
 ###구조
-
 ![projServe](projServe.png)
 - 프로젝트 구조 예시
     - 사용자와 접하는 서버: WEB 프로젝트
     - DB와 접하는 서버: API 프로젝트
     - 공통으로 사용할 프로젝트: COMMON 프로젝트
 
+#
 
 root 프로젝트 하위에 각 프로젝트(모듈)를 생성합니다.
-
 > **multi-modules** / module-api, module-web, module-common
 >> module-common: 공통 프로젝트
 
 이 때 root 프로젝트를 기준으로 빌드가 이루어지기 때문에 하위 프로젝트에는
 gradle폴더나 redlew등의 파일이 없고 build.gradle과 src폴더만 존재한다는 점을 인지합니다.
 
+#
+
+---
 
 ###module-common
 공통으로 사용 될 파일들을 생성합니다.
@@ -91,12 +93,14 @@ public class Member {
     }
 }
 ```
+#
 
 **module-common/java/com/code/repository/MemberRepository.java**
 ```
 public interface MemberRepository extends JpaRepository<Member, Long> {
 }
 ```
+#
 
 **module-common/build.gradle**
 ```
@@ -133,6 +137,7 @@ public class MemberServiceCustom {
 MemberRepository의 bean injection 사용
 
 #
+
 **module-api/build.gradle**
 ```
 dependencies {
@@ -158,6 +163,8 @@ rootProject.name = 'multi-modules'
 include 'module-common', 'module-api', 'module-web'
 ```
 multi-modules가 module-common, module-api-module-web을 관리한다는 정의
+
+#
 
 
 
@@ -209,6 +216,7 @@ project(':module-web') {
 ```
 subprojects와 project()
 
+#
 
 ###subprojects
 settings.gradle에서 정의해둔 하위 프로젝트들을 관리합니다.
@@ -230,6 +238,8 @@ _: 디렉토리 path 표시_
 
 ###👉🏻멀티 모듈 구조 완성!
 
+#
+
 [^2]: 멀티 모듈 빌드
 
 위에서 얘기했던 멀티 모듈 빌드시 만족 조건을 기억하시나요?
@@ -246,6 +256,8 @@ bootRepackage {
     enabled = false
 }
 ```
+
+#
 
 **스프링 부트 2.0 이상**
 ```

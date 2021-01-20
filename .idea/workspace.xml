@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="42f16978-bad8-4d5e-b415-0c5d76450f9e" name="Default Changelist" comment="배포">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1n2xJAwJnx2jKkcfMiUdpZ8eoLJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/content/assets" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/content/blog/sample-post-2" />
+      <recent name="$PROJECT_DIR$/content/blog/code-highlighting-post" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="42f16978-bad8-4d5e-b415-0c5d76450f9e" name="Default Changelist" comment="" />
+      <created>1610601912962</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610601912962</updated>
+    </task>
+    <task id="LOCAL-00001" summary="first edit">
+      <created>1610610905248</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610610905248</updated>
+    </task>
+    <task id="LOCAL-00002" summary="edit font-color and 1st page">
+      <created>1610686890495</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610686890495</updated>
+    </task>
+    <task id="LOCAL-00003" summary="edit 2nd page">
+      <created>1610698828135</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610698828135</updated>
+    </task>
+    <task id="LOCAL-00004" summary="edit">
+      <created>1610699321846</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610699321846</updated>
+    </task>
+    <task id="LOCAL-00005" summary="edit">
+      <created>1610699847859</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610699847859</updated>
+    </task>
+    <task id="LOCAL-00006" summary="re readme.md">
+      <created>1610699960198</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610699960198</updated>
+    </task>
+    <task id="LOCAL-00007" summary="edit AI page">
+      <created>1610945795056</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610945795057</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add oasis Logo">
+      <created>1610956581703</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1610956581703</updated>
+    </task>
+    <task id="LOCAL-00009" summary="rewrite README.md">
+      <created>1611015188553</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1611015188553</updated>
+    </task>
+    <task id="LOCAL-00010" summary="rename pathPrefix">
+      <created>1611018702391</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611018702391</updated>
+    </task>
+    <task id="LOCAL-00011" summary="rename pathPrefix">
+      <created>1611019135872</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611019135872</updated>
+    </task>
+    <task id="LOCAL-00012" summary="경로생성">
+      <created>1611019786675</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1611019786675</updated>
+    </task>
+    <task id="LOCAL-00013" summary="plugin 추가">
+      <created>1611019996372</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1611019996372</updated>
+    </task>
+    <task id="LOCAL-00014" summary="plugin 추가">
+      <created>1611020079554</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1611020079554</updated>
+    </task>
+    <task id="LOCAL-00015" summary="path">
+      <created>1611021977819</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1611021977819</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add index.js">
+      <created>1611023276061</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1611023276061</updated>
+    </task>
+    <task id="LOCAL-00017" summary="...">
+      <created>1611024353072</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1611024353072</updated>
+    </task>
+    <task id="LOCAL-00018" summary="edit readme">
+      <created>1611024390281</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1611024390281</updated>
+    </task>
+    <task id="LOCAL-00019" summary="edit package.json">
+      <created>1611026152885</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1611026152885</updated>
+    </task>
+    <task id="LOCAL-00020" summary="edit package.json">
+      <created>1611026329378</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1611026329378</updated>
+    </task>
+    <task id="LOCAL-00021" summary="edit package.json">
+      <created>1611032962392</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1611032962392</updated>
+    </task>
+    <task id="LOCAL-00022" summary="edit package.json">
+      <created>1611033782332</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1611033782332</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add blog file">
+      <created>1611034922078</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1611034922078</updated>
+    </task>
+    <task id="LOCAL-00024" summary="delete">
+      <created>1611037950050</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1611037950050</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add">
+      <created>1611038102897</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1611038102897</updated>
+    </task>
+    <task id="LOCAL-00026" summary="배포">
+      <created>1611038435290</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1611038435290</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first edit" />
+    <MESSAGE value="edit font-color and 1st page" />
+    <MESSAGE value="edit 2nd page" />
+    <MESSAGE value="edit" />
+    <MESSAGE value="re readme.md" />
+    <MESSAGE value="edit AI page" />
+    <MESSAGE value="add oasis Logo" />
+    <MESSAGE value="rewrite README.md" />
+    <MESSAGE value="rename pathPrefix" />
+    <MESSAGE value="경로생성" />
+    <MESSAGE value="plugin 추가" />
+    <MESSAGE value="path" />
+    <MESSAGE value="add index.js" />
+    <MESSAGE value="..." />
+    <MESSAGE value="edit readme" />
+    <MESSAGE value="edit package.json" />
+    <MESSAGE value="add blog file" />
+    <MESSAGE value="delete" />
+    <MESSAGE value="add" />
+    <MESSAGE value="배포" />
+    <option name="LAST_COMMIT_MESSAGE" value="배포" />
+  </component>
+</project>

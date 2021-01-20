@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-leonids",
+  "name": "oasisbusiness",
   "private": true,
   "description": "A starter for a blog powered by Gatsby and Markdown",
   "version": "0.1.0",
-  "author": "Renyuan Zou <zourenyuan@gmail.com>",
+  "author": "oasisbusiness <zourenyuan@gmail.com>",
   "bugs": {
     "url": "https://github.com/OasisBusiness/oasisbusiness.github.io/issues"
   },

@@ -29,13 +29,6 @@ module.exports = {
       },
     },
     {
-          resolve: `gatsby-source-filesystem`,
-          options: {
-            path: `${__dirname}/src`,
-            name: `src`,
-          },
-        },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [

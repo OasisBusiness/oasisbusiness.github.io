@@ -23,7 +23,7 @@ type Data = {
           title: string
           date: string
           description: string
-          name: string
+          writeAuthor: string
         }
         fields: {
           slug: string
@@ -65,7 +65,7 @@ const BlogIndex = ({
                 </Link>
               </h3>
               <small>{node.frontmatter.date}</small>
-              <small>{node.frontmatter.name}</small>
+              <small>{node.frontmatter.writeAuthor}</small>
             </header>
             <section>
               <p

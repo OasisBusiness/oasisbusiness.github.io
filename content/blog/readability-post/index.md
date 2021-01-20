@@ -1,6 +1,7 @@
 ---
 title: 'Back-end'
 date: "2021-01-07T07:26:03.284Z"
+writeAuthor: semin
 description: " The back end of a website consists of a server, an application, and a database"
 categories: [paragraph]
 comments: true

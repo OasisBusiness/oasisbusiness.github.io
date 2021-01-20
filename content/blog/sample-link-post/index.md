@@ -1,6 +1,7 @@
 ---
 title: "OASIS CREW"
 date: "2021-01-15T07:26:03.284Z"
+writeAuthor: semin
 description: "Introduce attractive oasis-members"
 categories: [link post]
 link: http://renyuanz.github.io

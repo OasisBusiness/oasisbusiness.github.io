@@ -1,6 +1,7 @@
 ---
 title: Matching platform
 date: "2021-01-14T07:26:03.284Z"
+writeAuthor: semin
 description: "Just about everything you'll need to run a start-up business"
 categories: [hello world]
 comments: true

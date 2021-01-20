@@ -1,6 +1,7 @@
 ---
 title: "Gradle? 멀티 모듈!"
 date: "2021-01-20T07:26:03.284Z"
+writeAuthor: semin
 description: "project with SpringBoot"
 categories: [paragraph, feature photo]
 comments: true
@@ -10,7 +11,7 @@ credit: Greg Rakozy
 creditlink: https://unsplash.com/photos/oMpAz-DN-9I
 ---
 
-###멀티 모듈
+###Gradle
 IntelliJ를 시작하고 gradle로 프로젝트를 생성하고 SpringBoot로 프로젝트 개발 환경을 바꿔주고..
 
 이것저것 개발 환경을 바꿀 때 마다 이게 뭐길래 이걸로 하는걸까?싶었고
@@ -18,9 +19,9 @@ IntelliJ를 시작하고 gradle로 프로젝트를 생성하고 SpringBoot로 �
 그 첫 번째 관문에서 마주친 것이 바로 gradle.
 
 
-## Gradle
+## 멀티 모듈
 
-다중 프로젝트로 구성된 서비스에서 각 서버들마다 _공통으로 존재하는 클래스들_ 을 효율적으로 다뤄주 것이 바로,
+다중 프로젝트로 구성된 서비스에서 각 서버들마다 _공통으로 존재하는 클래스들_ 을 효율적으로 다뤄주는 것이 바로,
 **Gradle Multi Module** 방식입니다.
 
 각 서버에 동일한 클래스가 존재한다하여 그저 복사 붙여넣기에 의존하다가는 프로젝트의 규모가 커질경우
@@ -29,13 +30,16 @@ IntelliJ를 시작하고 gradle로 프로젝트를 생성하고 SpringBoot로 �
 
 그래서 복사 붙여넣기로 모든 서버에 동일 클래스를 존재시키는 것이 아니라
 공통 클래스를 한 번만 생성하여 사용할 수 있도록 프로젝트를 구성합니다.
+
 즉, 공통 프로젝트를 **모듈**화하여 프로젝트 안에 갖고 있는 구조입니다.
 
 ***
-이 때 개발시와 빌드시 만족해야 할 조건이 있습니다.
+이 때 개발을 하고, 빌드를 할 때 만족해야하는 조건이 있습니다.
 - 개발시에는 즉각적으로 공통 프로젝트 코드 사용이 용이
 - 빌드시에는 자동으로 공통 프로젝트를 포함하여 빌드 진행
 ***
+
+#
 
 ##멀티 모듈 설계
 

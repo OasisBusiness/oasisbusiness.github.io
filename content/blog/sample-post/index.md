@@ -1,6 +1,7 @@
 ---
 title: ABOUT
 date: "2021-01-16T07:26:03.284Z"
+writeAuthor: semin
 description: "BUSINESS MATCHING PLATFORM, 오아시스비즈니스"
 categories: [hello world]
 comments: true

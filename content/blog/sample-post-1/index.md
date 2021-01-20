@@ -1,6 +1,7 @@
 ---
 title: Front-end
 date: "2021-01-10T07:26:03.284Z"
+writeAuthor: semin
 description: "convert data to a graphical interface"
 categories: [hello world]
 comments: true

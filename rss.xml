@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[oasisbusiness]]></title><description><![CDATA[A simple, fixed sidebar two columns Gatsby.js blog starter.]]></description><link>https://oasisbusiness.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 20 Jan 2021 02:02:56 GMT</lastBuildDate><item><title><![CDATA[ABOUT]]></title><description><![CDATA[Our Services 오아시스 비즈니스는 창업을 준비 중인 에비창업가와 가맹점을 더 확장하고 싶은 파트너사와의 매칭을 돕습니다.  오아시스 비즈니스는 정부 지원 사업인 데이터 바우처에 선정된 경쟁력을 바탕으로 상권 분석 자료가 AI…]]></description><link>https://oasisbusiness.github.io/sample-post/</link><guid isPermaLink="false">https://oasisbusiness.github.io/sample-post/</guid><pubDate>Sat, 16 Jan 2021 07:26:03 GMT</pubDate><content:encoded>&lt;h2&gt;Our Services&lt;/h2&gt;
+&lt;h3&gt;오아시스 비즈니스는 창업을 준비 중인 에비창업가와 가맹점을 더 확장하고 싶은 파트너사와의 매칭을 돕습니다.&lt;/h3&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;오아시스 비즈니스는 정부 지원 사업인 데이터 바우처에 선정된 경쟁력을 바탕으로 상권 분석 자료가 &lt;strong&gt;AI 기반&lt;/strong&gt;으로 정보를 제공하는 &lt;strong&gt;‘오아시스 비즈니스’ 플랫폼&lt;/strong&gt;을 개발하여
+창업자에게 프랜차이즈 및 상가 등 조건에 맞는 견적서를 제공하고 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3e20811fa5811ceb8f29d336d4ec4463/1cfc2/aboutOasis.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 45.94594594594595%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABNElEQVQoz63MTU/CQBAG4P0b3jQRqKgRKxQIugWFYiwFFOQjeJFEb/qbDQRa2LSQmHh93dmFpHjywOHJvDO7M+zg/gf7xA6r3/iPo5jDPzmOGfYaRlmSNRXHd/sk351Rn9z0Rgy7KEUgGemKRzC5roW7CCVnpXLWjpCXfa4i32Q2b/S7VdE5s7lBWCEvYOUEml6I0SjCi9R5CjHoR+h2QjVvt0K8v60wftVo/vmxxni8UrxGiFxWgG4x2wzALwNUrQD1YgCnEMC1Fxi1BQaewKOzRL8hMGwKtGtLVYnLF2rHKWp0g26x+vkMxDmboSZV0zO0rDmGtwEGZR89rlF+vvbRLfkYVny45lz9VXun+gZhzZMptlokPUUjNcHDsZSYwN1QOanRm2fov9u97Q3WS3xhn34B/FGtn+LIQk0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Smithsonian Image&quot;
+        title=&quot;Smithsonian Image&quot;
+        src=&quot;/static/3e20811fa5811ceb8f29d336d4ec4463/fcda8/aboutOasis.png&quot;
+        srcset=&quot;/static/3e20811fa5811ceb8f29d336d4ec4463/12f09/aboutOasis.png 148w,
+/static/3e20811fa5811ceb8f29d336d4ec4463/e4a3f/aboutOasis.png 295w,
+/static/3e20811fa5811ceb8f29d336d4ec4463/fcda8/aboutOasis.png 590w,
+/static/3e20811fa5811ceb8f29d336d4ec4463/efc66/aboutOasis.png 885w,
+/static/3e20811fa5811ceb8f29d336d4ec4463/1cfc2/aboutOasis.png 900w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;오아시스 비즈니스는 빅데이터 매칭 알고리즘 기반의 업종, 점포 맞춤 견적 O2O 플랫폼의 기술력과 잠재력을 인정받아 &lt;strong&gt;벤처기업 인증&lt;/strong&gt;을 획득했는데요.
+벤처 인증은 &lt;em&gt;공식 기관의 검증&lt;/em&gt; 이기에, 창업자들에게 제공하는 지원과 정보의 신뢰도 및 범위가 확장되었음을 의미하기도 합니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 438px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/35a20c9d93a20113c631a1b75286fb17/50e4b/ventureBusiness.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 145.94594594594594%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAdCAYAAACqhkzFAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEnklEQVRIx31V246jRhD1T+cf8gN5zOtKWWmjSFGkzUWaaGZ3M7e9ZGY8HhvbgMEGXzDY2IBvnJyqBsZPeSiabprT51RVV7WORYpdMqGNcViH2K8CneexjyIe03zzneuFWDKu1sfmnd+K2MM+neK036K1S3wk3gOS0Mbc62Lhd7Ge2QpSVKBymM7Vxs26ATSgm6BN0BlaeTREnoRIkyVmgYd4ESJPExx3WxzI/lhs9N1YRhZZM5b7XEc+IMQKGgFtlVPyh3KX4kQQnHLgsAX2G2PH3KyVhXk/ZPr9kK8hLhPQIh6pkla+GCplYXLIErXnx0cMrS6cgQXPGXDso/fSwdPDI1x7gBHNd4cNqAIuXWXZypeGoQFckeEaf7z/E7f/3ODr/Wf0Om18/PAJFxeXuLz8iNubOwI/oM1DhfUrIBnGNWDF8Jiv1HDcGsl0AT1tZItMkV27YV/tJ4ET3bUTyYy2BkUipumTLlGkEfL1Atlqzn9iZMmc84jzam2bNK45ig9zUbUxkg2gzYnPgGywnHqYjR0sghGC0QCb5RRTb4go9BDxWzxj+vAQccspN+4RK1Wygx1lV4CeRni9CBAFLuKpr+DrKMDMHyprsd0Z+yyZYSsW08i+UBy3ijIBJV3Wi4kCzidkOXGRLkPcfPgb7W/38J0eArcPz+7B7XcQ8qBkPlbWCXNXASP3nCElhyP4wy5l2/D5o5zu9p/hDV/I1MZqPiGArwoKMsWOckUyg2IAneqmUHtJhgI4caxm3MZTjO0uRoMXZS2SU7phRWYyHraxmgTHANpGck6GsrhejBFSlgCK9M0yIHBPWY85JmQ3cS2dz6nCAC7PAIXhYlD5UOivUOYJTllsRhpLzGsuUiIOG5OfYipXvp9JlpftwmFq+BjR2RLVkCkTkMmYfhTpHhk5Fn1J6cJu6g30m+wXxiH9q8QUkDclW7gIPRv9zoP+JFEUvzm9tr67VseMtGH3SQ+QQ2OmlrgnZb5qttSAecSEnozoJ0ujKZsloet5DTD1JPpkRIYJ00XcoG5ihpxF2daCKVGWj0deKRlP6sOVmqZGZbX/yuq2yH7J4SaxCy0OY43UnlHbM2p1OjTv1d0VgA1TyXr+F1MyH5H5hFnhO31eu+rqFU35Ss2PZwDmPW6qkBwq6wIq10+unrmKkcqVitMqYud/AOuq8goo1hSFSroUh11dbQRwXwEe80SLrLG6TL0C1VbvaQ6QeiiSG0C2T1k836z94vxHbVhyaFrNTS2UPSc2q10sLUABbe2pR4a+lJsgN+KUqRz5USs3G1PJ23DiHrHyVOAQONi8f4f0159QPH4hxqTuKX2UWQ7L+x7vfv8OnXaIi8t7XN+1tUHdfLrC59trtadvX9BtP8CyXnD19g06P/6A7Le3yC7/Io8KsFgOlHayvoPrXbIvJ3AcVuxJwP4ca6+eB7726zXL2SrirWDJn3+9xvyXN2T5M/KbK6ZYWAMOVTuOJaUeTSE4bbVRiTyeZpqTjNKoOJbiBkn65QT7uc/tCdNmwFgEaIlz87mFrLE+spllTOaznq7J5VeT92ouAVWLpGLZ2k7/AyHkjVsFETVaAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Smithsonian Image&quot;
+        title=&quot;Smithsonian Image&quot;
+        src=&quot;/static/35a20c9d93a20113c631a1b75286fb17/50e4b/ventureBusiness.png&quot;
+        srcset=&quot;/static/35a20c9d93a20113c631a1b75286fb17/12f09/ventureBusiness.png 148w,
+/static/35a20c9d93a20113c631a1b75286fb17/e4a3f/ventureBusiness.png 295w,
+/static/35a20c9d93a20113c631a1b75286fb17/50e4b/ventureBusiness.png 438w&quot;
+        sizes=&quot;(max-width: 438px) 100vw, 438px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;벤처기업 인증을 받은 오아시스 비즈니스는 예비창업자가 창업 조건을 입력만 하면 창업 비용+점포비용 비교견적을 한 번에 알려주는 서비스입니다.
+창업박람회, 프랜차이즈 설명회, 부동산 등 직접 찾아다닐 필요 없이 실시간으로 상권분석부터 점포 물색까지 오아시스 비즈니스에서 쉽고, 간단하고, 빠르게 한 번에 비교해 보실 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2cb707f469537b357d792d55271f8afc/58213/servicePic.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACAklEQVQoz32SS2gTURiFgysXIroQcaFYtXUhtkVolSjGx8JqRImooAtxawKusnHtroQIRTdqW0uitWJRcKOEkI0iKEpDUEpjTfMem4dpM81kJpl8ziSZaSLigct/uY9z/3PusTQaDXTotXPoqMoKgfdL/FgqMr+YJ/Qxwd+o1+vmfR0WY6Kq61VV1eY8mSmyy/qIjX1jbOi5R/+In7JYoVgoIMsyfr8fp9NJOBxu31WxdLIbpAaS6QK7jz6m1zZJj22aoYszZDICsdhPstksbrcbh8PRJDa6tdTbJMEPac7efMvU7AI1pcLq6goLiyn2n55hYOQ5Q1feYb36hrU1SXu4JTMSieDz+SiVSqZsS63Wkndn9BM7Dj/j8q0A+ZxAIh7n69w8g+df0XvqJduHp7l2O4AkKf/30JAZT5e5O/aFz2FB39YOqMQSy+yzTbBl4AmbDk5x8vprRK1DSao0CUKhEB6PR7Mhs+6hwVwWFcLf8wi5ivl6LJHT5ProOzHJnmPjWC+9IK15GI1GSaVSuFwu7HZ7t4cGYXa5zNw3AUGrnYR7j0+w88g42w49ZPDcU0RRav6wriwYDOL1ekkmk//qUG6SlsWq6Uc6W2D4gp+t/Q/YfOA+Z27MUm9HSkexWGx+TGeWu2JjwAx2VSaX/82vXGuUVsSu8OsSFUUxc6uv/QHSdrS26pFLdwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Smithsonian Image&quot;
+        title=&quot;Smithsonian Image&quot;
+        src=&quot;/static/2cb707f469537b357d792d55271f8afc/fcda8/servicePic.png&quot;
+        srcset=&quot;/static/2cb707f469537b357d792d55271f8afc/12f09/servicePic.png 148w,
+/static/2cb707f469537b357d792d55271f8afc/e4a3f/servicePic.png 295w,
+/static/2cb707f469537b357d792d55271f8afc/fcda8/servicePic.png 590w,
+/static/2cb707f469537b357d792d55271f8afc/efc66/servicePic.png 885w,
+/static/2cb707f469537b357d792d55271f8afc/58213/servicePic.png 902w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[OASIS CREW]]></title><description><![CDATA[…]]></description><link>https://oasisbusiness.github.io/sample-link-post/</link><guid isPermaLink="false">https://oasisbusiness.github.io/sample-link-post/</guid><pubDate>Fri, 15 Jan 2021 07:26:03 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;strong&gt;오아시스 비즈니스 대표&lt;/strong&gt; 문 욱,&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7f2595992e65c39a39080a7a614c39d2/3acf0/bossillustration.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECBAP/xAAZAQACAwEAAAAAAAAAAAAAAAACAwABBAX/2gAMAwEAAhADEAAAAdlOFwPYyrkQMX3HL1f/xAAcEAABBQADAAAAAAAAAAAAAAABAAIDERIiMTL/2gAIAQEAAQUCmdlgl5F9KaS3S61RR9WU3r//xAAaEQADAAMBAAAAAAAAAAAAAAAAAQISITEy/9oACAEDAQE/AVM8MEN7J8n/xAAZEQEBAAMBAAAAAAAAAAAAAAABAAIDEjL/2gAIAQIBAT8BVurEOS2+2//EABsQAAICAwEAAAAAAAAAAAAAAAABAjEQEiFh/9oACAEBAAY/ArIxeyLNEupkOe5t4//EABwQAAMBAAIDAAAAAAAAAAAAAAABESExQYHB8f/aAAgBAQABPyHTrldDWko8sKJ6G8oPMGaTpLTg1PUcz7p9Ae7dP//aAAwDAQACAAMAAAAQjxc+/8QAGREAAwEBAQAAAAAAAAAAAAAAAAERMSFB/9oACAEDAQE/EFFGl/B1dMj/xAAaEQACAgMAAAAAAAAAAAAAAAAAARFBITGh/9oACAECAQE/EGXNGFmoUjrP/8QAHBABAAMBAQADAAAAAAAAAAAAAQARITFBUYGh/9oACAEBAAE/EGvM+A6uRxxajppmod/Hj8gumyYJRfIxsLZY1pc3mPdZkinoOyjgfeNYivq3P//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;BossImage&quot;
+        title=&quot;BossImage&quot;
+        src=&quot;/static/7f2595992e65c39a39080a7a614c39d2/1c72d/bossillustration.jpg&quot;
+        srcset=&quot;/static/7f2595992e65c39a39080a7a614c39d2/a80bd/bossillustration.jpg 148w,
+/static/7f2595992e65c39a39080a7a614c39d2/1c91a/bossillustration.jpg 295w,
+/static/7f2595992e65c39a39080a7a614c39d2/1c72d/bossillustration.jpg 590w,
+/static/7f2595992e65c39a39080a7a614c39d2/a8a14/bossillustration.jpg 885w,
+/static/7f2595992e65c39a39080a7a614c39d2/fbd2c/bossillustration.jpg 1180w,
+/static/7f2595992e65c39a39080a7a614c39d2/3acf0/bossillustration.jpg 2000w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;국밥집을 창업하려다 정보의 비대칭을 경험하고 직접 경험한 불편함과 그간의 부동산업경험을 바탕으로 오아시스비즈니스를 개발/운영 중&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;무수한 창업 정보 속에서, 내 조건에 맞는 창업 정보만 알려주는 공간이 있으면 어떨까?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;최종 목적지는 &lt;strong&gt;모두의 성공&lt;/strong&gt;, 오아시스비즈니스의 서비스를 사용하는 사람들이 성공해야 비로소 우리의 성공이라고 말할 수 있다.&lt;/p&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2&gt;&lt;strong&gt;오아시스 비즈니스 개발이사&lt;/strong&gt; 박 주형,&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7f2595992e65c39a39080a7a614c39d2/3acf0/bossillustration.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECBAP/xAAZAQACAwEAAAAAAAAAAAAAAAACAwABBAX/2gAMAwEAAhADEAAAAdlOFwPYyrkQMX3HL1f/xAAcEAABBQADAAAAAAAAAAAAAAABAAIDERIiMTL/2gAIAQEAAQUCmdlgl5F9KaS3S61RR9WU3r//xAAaEQADAAMBAAAAAAAAAAAAAAAAAQISITEy/9oACAEDAQE/AVM8MEN7J8n/xAAZEQEBAAMBAAAAAAAAAAAAAAABAAIDEjL/2gAIAQIBAT8BVurEOS2+2//EABsQAAICAwEAAAAAAAAAAAAAAAABAjEQEiFh/9oACAEBAAY/ArIxeyLNEupkOe5t4//EABwQAAMBAAIDAAAAAAAAAAAAAAABESExQYHB8f/aAAgBAQABPyHTrldDWko8sKJ6G8oPMGaTpLTg1PUcz7p9Ae7dP//aAAwDAQACAAMAAAAQjxc+/8QAGREAAwEBAQAAAAAAAAAAAAAAAAERMSFB/9oACAEDAQE/EFFGl/B1dMj/xAAaEQACAgMAAAAAAAAAAAAAAAAAARFBITGh/9oACAECAQE/EGXNGFmoUjrP/8QAHBABAAMBAQADAAAAAAAAAAAAAQARITFBUYGh/9oACAEBAAE/EGvM+A6uRxxajppmod/Hj8gumyYJRfIxsLZY1pc3mPdZkinoOyjgfeNYivq3P//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;BossImage&quot;
+        title=&quot;BossImage&quot;
+        src=&quot;/static/7f2595992e65c39a39080a7a614c39d2/1c72d/bossillustration.jpg&quot;
+        srcset=&quot;/static/7f2595992e65c39a39080a7a614c39d2/a80bd/bossillustration.jpg 148w,
+/static/7f2595992e65c39a39080a7a614c39d2/1c91a/bossillustration.jpg 295w,
+/static/7f2595992e65c39a39080a7a614c39d2/1c72d/bossillustration.jpg 590w,
+/static/7f2595992e65c39a39080a7a614c39d2/a8a14/bossillustration.jpg 885w,
+/static/7f2595992e65c39a39080a7a614c39d2/fbd2c/bossillustration.jpg 1180w,
+/static/7f2595992e65c39a39080a7a614c39d2/3acf0/bossillustration.jpg 2000w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;금융 IT 개발자 중심으로 16년 근무했고, 강의나 집필, 멘토링 등 다양한 방면에서 활동하고 있습니다. 최신 기술에 대해 꾸준히 공부하고, 논의하는 것에 대해 좋아합니다.&lt;/p&gt;
+&lt;p&gt;박 주형 개발자의 &lt;a href=&quot;https://github.com/joo-pe&quot;&gt;깃허브&lt;/a&gt; 를 방문해보세요!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Matching platform]]></title><description><![CDATA[SMART PLATFORM 기존의 예비 창업가들이 겪어야했던 어려움을 한번에 해소시켜주는, 비용과 시간 을 아끼는 스마트한 플랫폼 DIFFICULTIES…]]></description><link>https://oasisbusiness.github.io/sample-post-2/</link><guid isPermaLink="false">https://oasisbusiness.github.io/sample-post-2/</guid><pubDate>Thu, 14 Jan 2021 07:26:03 GMT</pubDate><content:encoded>&lt;h2&gt;SMART PLATFORM&lt;/h2&gt;
+&lt;p&gt;기존의 예비 창업가들이 겪어야했던 어려움을 한번에 해소시켜주는, &lt;em&gt;비용과 시간&lt;/em&gt; 을 아끼는 스마트한 플랫폼&lt;/p&gt;
+&lt;h3&gt;DIFFICULTIES&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;창업 박람회, 프랜차이즈 설명회 참석 및 부동산 방문으로 인한 시간 소모&lt;/li&gt;
+&lt;li&gt;정보의 결핍&lt;/li&gt;
+&lt;li&gt;진행 도중 생각지도 못한 추가 비용의 발생&lt;/li&gt;
+&lt;li&gt;점포 게약 중 발생하는 비합리적인 권리금&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;나만의 창업 견적서&lt;/h3&gt;
+&lt;p&gt;예비 창업가가 입력한 창업조건과 부합하는 파트너를 알아서 찾아 매칭합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;업종, 지역, 자본금, 희망 매출, 점포 조건 등&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;해당 매칭에 대한 견적서도 함께 전달되어 편리하게 창업 조건을 비교 선택할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5cb6f1151e65dffdf130e5a843ee1f2e/fe9f1/matchingPlatform.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.08108108108109%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACp0lEQVQoz12T3UtTcRjHdxFpagoRktO57bzsBSPfNg035+bmNNnwJTODEl/JigINk9TlzsRVEkVR0UUXgdhFUL7NnbMp6jyKFYnd9ed8e87Zkurix8PDOefzfL+/73M0RrcIe3sSF1olaOvi0DlF6Ool8F4JVkcUuopH0FVGwNVGoa+eRQn1Fuc8PRfBeCSwHpGOdHw0JU4JK2vfMf9qF77eHXTd3kVTbwqsexlM1ThOls5AWxHF5YEFmB3PcKIkBEPVFEzeNQImwDVK/wJLXSLG576i776M6rYNuHq2YO/YAt+4BNY2iSx9GGUNL9DRv4Bq/2tk0QCjLawCjW4Jetd/CvUNIoYepNA2tAnFvtUvgvMmYfF9AWd/iFw2gtNcGEXlj5HPCWrP2KZg9i7D1JRERSAJllQyf1tOJn7g5bt9dN6S0T++j9YBGbznM0w1kyqgwCQgjw2rVen5mimUOpdwY0zGt6NfOH8pCUWYAtYoqpr7ZdR1b+OsPUbBrKPwYpwsrdCHIeQyaWABL2SAArgaAXrnKoIjKXyIHcHil2BwZ4A6VwILH/cw82Qbrms7aL+ZwtW7e6gKxsHaQxmFEeTzc2pVgEabgLKWGLruyLg+KpOjHRhUhWI6lKdvD3EvfIC6K1to6UshMCzT3ayrwDxWgc3gDD9GNaz2jF2AtSmG8sAGKoMbZDlBd5gOR2OgpDqGN9HQnUCxI06T1qGlyntXyfI0TrFRFFlGUFikxTnrKHLYORokwOyLUcKSqkxV9yeUYgrlYP8n3rynMAZTGJzYg59Ush4C1oaQbZgFQ6AuhxMG6wSyjZFjoLKHik02s4uMqpDorYMy6nvS96D8IcqLZt8a7eE0crhZ5Hd+QvPzQ+QFFikkgdZGgImARgXoEVW7jAoU8Rt8gcyh4RmaNwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;matchingPlatform&quot;
+        title=&quot;matchingPlatform&quot;
+        src=&quot;/static/5cb6f1151e65dffdf130e5a843ee1f2e/fcda8/matchingPlatform.png&quot;
+        srcset=&quot;/static/5cb6f1151e65dffdf130e5a843ee1f2e/12f09/matchingPlatform.png 148w,
+/static/5cb6f1151e65dffdf130e5a843ee1f2e/e4a3f/matchingPlatform.png 295w,
+/static/5cb6f1151e65dffdf130e5a843ee1f2e/fcda8/matchingPlatform.png 590w,
+/static/5cb6f1151e65dffdf130e5a843ee1f2e/fe9f1/matchingPlatform.png 883w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Machine Learning, AI]]></title><description><![CDATA[오아시스 비즈니스만의 데이터로 분석해낸 상권 정보를 확인하세요 Our AI Model…]]></description><link>https://oasisbusiness.github.io/code-highlighting-post/</link><guid isPermaLink="false">https://oasisbusiness.github.io/code-highlighting-post/</guid><pubDate>Tue, 12 Jan 2021 07:26:03 GMT</pubDate><content:encoded>&lt;p&gt;오아시스 비즈니스만의 데이터로 분석해낸 상권 정보를 확인하세요&lt;/p&gt;
+&lt;h3&gt;Our AI Model&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;!-- DNN
+wtih TensorFlow (텐서플로) --&amp;gt;
+
+model = tf.keras.Sequential([
+    tf.keras.layers.SimpleRNN(units=4, activation=&amp;#39;tanh&amp;#39;, return_sequences=True, input_shape=[4,1])
+])
+
+model.compile(optimizer=&amp;#39;adam&amp;#39;, loss=&amp;#39;mse&amp;#39;)
+model.summary()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;상권 분석&lt;/h2&gt;
+&lt;p&gt;창업에 필요한 상권 분석 데이터를 바로 보여드립니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt; 상가 정보 • 유동 인구 • 거주 인구 • 업종 정보&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2af024851088e0aff43602f11ef5ec2b/5bf79/MLAI.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAACD0lEQVQoz41T247TMBDN/38KEh+AEAIJwT6waKUV8LCVem/TpL7F97GdhOOW7XJ5YWQlmfGcmePjSSOkO7S6Z5b+21JK148mEsVY181ijCGE+Bz6yw0Xu7rNrditnnNOqcEaW8ZSSjbGSCkRnOcZOVpruN77eZ5+gZGBaK2XknNGaJK2AIAANmLwcHWYvLPIJDANQbvUoBj8rutOp5MQIueslJJSeS6s6HO0XEg9mJxKygVt5DDkcRynkXJpkA3Ydrvd7XbH4zGlCj6fzxn1yVEmd+7906Nqt4fNGqclziNj0TlytoI556vVCkjG2FUSY70D1+B8jFZ0lm/wNtpgS/c8cJmtJaUqbbBdLpdo3rYtVHPOG6iVS76YFGLQemDCe0fRvrorD+sylRBTruBhGMAc/SFj7Yye3hkzHLvOeXvkbvHlqXBmA6Hease40G17glJVbegMZN/3UqlYkUFC3kDO+0Txw+Z+8fF+fvuGJsg0nk5H8Njs2/V6U8Fo2F3szFjwThh6ePeD9i0udhznvns0bJ32Cw99SxacoY1SAnwrGAer05AzpTzP+f038enzynz/an0cxzIM0I5QaJomSuStHipBbI3NbQbrk2JJZScPbPW6LO6MjTknKThGog5bKVfMhdH4An4ZbIoppmCUC7goj1Wlfzb/pzX//jTAUypgSOm3uX8efqiLKcKBofZPncxYH42l/8sAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;MLAI&quot;
+        title=&quot;MLAI&quot;
+        src=&quot;/static/2af024851088e0aff43602f11ef5ec2b/fcda8/MLAI.png&quot;
+        srcset=&quot;/static/2af024851088e0aff43602f11ef5ec2b/12f09/MLAI.png 148w,
+/static/2af024851088e0aff43602f11ef5ec2b/e4a3f/MLAI.png 295w,
+/static/2af024851088e0aff43602f11ef5ec2b/fcda8/MLAI.png 590w,
+/static/2af024851088e0aff43602f11ef5ec2b/efc66/MLAI.png 885w,
+/static/2af024851088e0aff43602f11ef5ec2b/5bf79/MLAI.png 966w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;지도에서 원하는 건물을 선택하기만 하면 그곳의 상권 정보를 알려드립니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1. 상가 정보
+    - 주차장 개수
+    - 정류장
+    - 도로까지의 거리
+
+2. 유동 인구 
+    - 요일 별 유동인구
+    - 시간대별 유동인구
+    - 연령별 분포도
+
+3. 거주 인구 
+    - 거주/직장 인구의 비율
+    - 연령병 인 분포
+
+4. 업종 
+    - 업종 별 전년대비 개수&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Front-end]]></title><description><![CDATA[WITH REACT Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within…]]></description><link>https://oasisbusiness.github.io/sample-post-1/</link><guid isPermaLink="false">https://oasisbusiness.github.io/sample-post-1/</guid><pubDate>Sun, 10 Jan 2021 07:26:03 GMT</pubDate><content:encoded>&lt;h2&gt;WITH REACT&lt;/h2&gt;
+&lt;p&gt;Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.&lt;/p&gt;
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+&lt;h3&gt;Body text&lt;/h3&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. &lt;strong&gt;This is strong&lt;/strong&gt;. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1440635592348-167b1b30296f?crop=entropy&amp;#x26;dpr=2&amp;#x26;fit=crop&amp;#x26;fm=jpg&amp;#x26;h=475&amp;#x26;ixjsv=2.1.0&amp;#x26;ixlib=rb-0.3.5&amp;#x26;q=50&amp;#x26;w=1250&quot; alt=&quot;Smithsonian Image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This is emphasized&lt;/em&gt;. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H2O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times (That’s a citation). Underline.Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.&lt;/p&gt;
+&lt;p&gt;HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.&lt;/p&gt;
+&lt;h3&gt;Blockquotes&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Tables&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;Header 1&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;Header 2&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;Header 3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;cell 1&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;cell 2&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;cell 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;cell 4&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;cell 5&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;cell 6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;List Types&lt;/h2&gt;
+&lt;h3&gt;Ordered Lists&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Item one&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;sub item one&lt;/li&gt;
+&lt;li&gt;sub item two&lt;/li&gt;
+&lt;li&gt;sub item three&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Item two&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Unordered Lists&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Item one&lt;/li&gt;
+&lt;li&gt;Item two&lt;/li&gt;
+&lt;li&gt;Item three&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Back-end]]></title><description><![CDATA[Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue…]]></description><link>https://oasisbusiness.github.io/readability-post/</link><guid isPermaLink="false">https://oasisbusiness.github.io/readability-post/</guid><pubDate>Thu, 07 Jan 2021 07:26:03 GMT</pubDate><content:encoded>&lt;p&gt;Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.&lt;/p&gt;
+&lt;p&gt;Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.&lt;/p&gt;
+&lt;h2&gt;Cupidatat 90’s lo-fi authentic try-hard&lt;/h2&gt;
+&lt;p&gt;In pug Portland incididunt mlkshk put a bird on it vinyl quinoa. Terry Richardson shabby chic +1, scenester Tonx excepteur tempor fugiat voluptate fingerstache aliquip nisi next level. Farm-to-table hashtag Truffaut, Odd Future ex meggings gentrify single-origin coffee try-hard 90’s.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sartorial hoodie&lt;/li&gt;
+&lt;li&gt;Labore viral forage&lt;/li&gt;
+&lt;li&gt;Tote bag selvage&lt;/li&gt;
+&lt;li&gt;DIY exercitation et id ugh tumblr church-key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Incididunt umami sriracha, ethical fugiat VHS ex assumenda yr irure direct trade. Marfa Truffaut bicycle rights, kitsch placeat Etsy kogi asymmetrical. Beard locavore flexitarian, kitsch photo booth hoodie plaid ethical readymade leggings yr.&lt;/p&gt;
+&lt;p&gt;Aesthetic odio dolore, meggings disrupt qui readymade stumptown brunch Terry Richardson pour-over gluten-free. Banksy american apparel in selfies, biodiesel flexitarian organic meh wolf quinoa gentrify banjo kogi. Readymade tofu ex, scenester dolor umami fingerstache occaecat fashion axe Carles jean shorts minim. Keffiyeh fashion axe nisi Godard mlkshk dolore. Lomo you probably haven’t heard of them eu non, Odd Future Truffaut pug keytar meggings McSweeney’s Pinterest cred. Etsy literally aute esse, eu bicycle rights qui meggings fanny pack. Gentrify leggings pug flannel duis.&lt;/p&gt;
+&lt;h2&gt;Forage occaecat cardigan qui&lt;/h2&gt;
+&lt;p&gt;Fashion axe hella gastropub lo-fi kogi 90’s aliquip +1 veniam delectus tousled. Cred sriracha locavore gastropub kale chips, iPhone mollit sartorial. Anim dolore 8-bit, pork belly dolor photo booth aute flannel small batch. Dolor disrupt ennui, tattooed whatever salvia Banksy sartorial roof party selfies raw denim sint meh pour-over. Ennui eu cardigan sint, gentrify iPhone cornhole.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Whatever velit occaecat quis deserunt gastropub, leggings elit tousled roof party 3 wolf moon kogi pug blue bottle ea. Fashion axe shabby chic Austin quinoa pickled laborum bitters next level, disrupt deep v accusamus non fingerstache.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Tote bag asymmetrical elit sunt. Occaecat authentic Marfa, hella McSweeney’s next level irure veniam master cleanse. Sed hoodie letterpress artisan wolf leggings, 3 wolf moon commodo ullamco. Anim occupy ea labore Terry Richardson. Tofu ex master cleanse in whatever pitchfork banh mi, occupy fugiat fanny pack Austin authentic. Magna fugiat 3 wolf moon, labore McSweeney’s sustainable vero consectetur. Gluten-free disrupt enim, aesthetic fugiat jean shorts trust fund keffiyeh magna try-hard.&lt;/p&gt;
+&lt;h2&gt;Hoodie Duis&lt;/h2&gt;
+&lt;p&gt;Actually salvia consectetur, hoodie duis lomo YOLO sunt sriracha. Aute pop-up brunch farm-to-table odio, salvia irure occaecat. Sriracha small batch literally skateboard. Echo Park nihil hoodie, aliquip forage artisan laboris. Trust fund reprehenderit nulla locavore. Stumptown raw denim kitsch, keffiyeh nulla twee dreamcatcher fanny pack ullamco 90’s pop-up est culpa farm-to-table. Selfies 8-bit do pug odio.&lt;/p&gt;
+&lt;h3&gt;Thundercats Ho!&lt;/h3&gt;
+&lt;p&gt;Fingerstache thundercats Williamsburg, deep v scenester Banksy ennui vinyl selfies mollit biodiesel duis odio pop-up. Banksy 3 wolf moon try-hard, sapiente enim stumptown deep v ad letterpress. Squid beard brunch, exercitation raw denim yr sint direct trade. Raw denim narwhal id, flannel DIY McSweeney’s seitan. Letterpress artisan bespoke accusamus, meggings laboris consequat Truffaut qui in seitan. Sustainable cornhole Schlitz, twee Cosby sweater banh mi deep v forage letterpress flannel whatever keffiyeh. Sartorial cred irure, semiotics ethical sed blue bottle nihil letterpress.&lt;/p&gt;
+&lt;p&gt;Occupy et selvage squid, pug brunch blog nesciunt hashtag mumblecore skateboard yr kogi. Ugh small batch swag four loko. Fap post-ironic qui tote bag farm-to-table american apparel scenester keffiyeh vero, swag non pour-over gentrify authentic pitchfork. Schlitz scenester lo-fi voluptate, tote bag irony bicycle rights pariatur vero Vice freegan wayfarers exercitation nisi shoreditch. Chambray tofu vero sed. Street art swag literally leggings, Cosby sweater mixtape PBR lomo Banksy non in pitchfork ennui McSweeney’s selfies. Odd Future Banksy non authentic.&lt;/p&gt;
+&lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[XXX]]></title><description><![CDATA[This is a sample post with a large feature image up top and tons of text. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over…]]></description><link>https://oasisbusiness.github.io/readability-feature-post/</link><guid isPermaLink="false">https://oasisbusiness.github.io/readability-feature-post/</guid><pubDate>Mon, 27 Jul 2020 07:26:03 GMT</pubDate><content:encoded>&lt;p&gt;This is a sample post with a large feature image&lt;sup id=&quot;fnref-1&quot;&gt;&lt;a href=&quot;#fn-1&quot; class=&quot;footnote-ref&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; up top and tons of text. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.&lt;/p&gt;
+&lt;p&gt;Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.&lt;/p&gt;
+&lt;h2&gt;Cupidatat 90’s lo-fi authentic try-hard&lt;/h2&gt;
+&lt;p&gt;In pug Portland incididunt mlkshk put a bird on it vinyl quinoa. Terry Richardson shabby chic +1, scenester Tonx excepteur tempor fugiat voluptate fingerstache aliquip nisi next level. Farm-to-table hashtag Truffaut, Odd Future ex meggings gentrify single-origin coffee try-hard 90’s.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sartorial hoodie&lt;/li&gt;
+&lt;li&gt;Labore viral forage&lt;/li&gt;
+&lt;li&gt;Tote bag selvage&lt;/li&gt;
+&lt;li&gt;DIY exercitation et id ugh tumblr church-key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Incididunt umami sriracha, ethical fugiat VHS ex assumenda yr irure direct trade. Marfa Truffaut bicycle rights, kitsch placeat Etsy kogi asymmetrical. Beard locavore flexitarian, kitsch photo booth hoodie plaid ethical readymade leggings yr.&lt;/p&gt;
+&lt;p&gt;Aesthetic odio dolore, meggings disrupt qui readymade stumptown brunch Terry Richardson pour-over gluten-free. Banksy american apparel in selfies, biodiesel flexitarian organic meh wolf quinoa gentrify banjo kogi. Readymade tofu ex, scenester dolor umami fingerstache occaecat fashion axe Carles jean shorts minim. Keffiyeh fashion axe nisi Godard mlkshk dolore. Lomo you probably haven’t heard of them eu non, Odd Future Truffaut pug keytar meggings McSweeney’s Pinterest cred. Etsy literally aute esse, eu bicycle rights qui meggings fanny pack. Gentrify leggings pug flannel duis.&lt;/p&gt;
+&lt;h2&gt;Forage occaecat cardigan qui&lt;/h2&gt;
+&lt;p&gt;Fashion axe hella gastropub lo-fi kogi 90’s aliquip +1 veniam delectus tousled. Cred sriracha locavore gastropub kale chips, iPhone mollit sartorial. Anim dolore 8-bit, pork belly dolor photo booth aute flannel small batch. Dolor disrupt ennui, tattooed whatever salvia Banksy sartorial roof party selfies raw denim sint meh pour-over. Ennui eu cardigan sint, gentrify iPhone cornhole.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Whatever velit occaecat quis deserunt gastropub, leggings elit tousled roof party 3 wolf moon kogi pug blue bottle ea. Fashion axe shabby chic Austin quinoa pickled laborum bitters next level, disrupt deep v accusamus non fingerstache.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Tote bag asymmetrical elit sunt. Occaecat authentic Marfa, hella McSweeney’s next level irure veniam master cleanse. Sed hoodie letterpress artisan wolf leggings, 3 wolf moon commodo ullamco. Anim occupy ea labore Terry Richardson. Tofu ex master cleanse in whatever pitchfork banh mi, occupy fugiat fanny pack Austin authentic. Magna fugiat 3 wolf moon, labore McSweeney’s sustainable vero consectetur. Gluten-free disrupt enim, aesthetic fugiat jean shorts trust fund keffiyeh magna try-hard.&lt;/p&gt;
+&lt;h2&gt;Hoodie Duis&lt;/h2&gt;
+&lt;p&gt;Actually salvia consectetur, hoodie duis lomo YOLO sunt sriracha. Aute pop-up brunch farm-to-table odio, salvia irure occaecat. Sriracha small batch literally skateboard. Echo Park nihil hoodie, aliquip forage artisan laboris. Trust fund reprehenderit nulla locavore. Stumptown raw denim kitsch, keffiyeh nulla twee dreamcatcher fanny pack ullamco 90’s pop-up est culpa farm-to-table. Selfies 8-bit do pug odio.&lt;/p&gt;
+&lt;h3&gt;Thundercats Ho!&lt;/h3&gt;
+&lt;p&gt;Fingerstache thundercats Williamsburg, deep v scenester Banksy ennui vinyl selfies mollit biodiesel duis odio pop-up. Banksy 3 wolf moon try-hard, sapiente enim stumptown deep v ad letterpress. Squid beard brunch, exercitation raw denim yr sint direct trade. Raw denim narwhal id, flannel DIY McSweeney’s seitan. Letterpress artisan bespoke accusamus, meggings laboris consequat Truffaut qui in seitan. Sustainable cornhole Schlitz, twee Cosby sweater banh mi deep v forage letterpress flannel whatever keffiyeh. Sartorial cred irure, semiotics ethical sed blue bottle nihil letterpress.&lt;/p&gt;
+&lt;p&gt;Occupy et selvage squid, pug brunch blog nesciunt hashtag mumblecore skateboard yr kogi. Ugh small batch swag four loko. Fap post-ironic qui tote bag farm-to-table american apparel scenester keffiyeh vero, swag non pour-over gentrify authentic pitchfork. Schlitz scenester lo-fi voluptate, tote bag irony bicycle rights pariatur vero Vice freegan wayfarers exercitation nisi shoreditch. Chambray tofu vero sed. Street art swag literally leggings, Cosby sweater mixtape PBR lomo Banksy non in pitchfork ennui McSweeney’s selfies. Odd Future Banksy non authentic.&lt;/p&gt;
+&lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn-1&quot;&gt;
+&lt;p&gt;Texture image courtesty of &lt;a href=&quot;http://www.lovetextures.com/&quot;&gt;Lovetextures&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;#fnref-1&quot; class=&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content:encoded></item></channel></rss>

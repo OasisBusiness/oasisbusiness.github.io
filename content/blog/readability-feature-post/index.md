@@ -38,12 +38,11 @@ IntelliJ를 시작하고 gradle로 프로젝트를 생성하고 SpringBoot로 �
 ###구조
 
 ![projServe](projServe.png)
-######프로젝트 구조 예시
-사용자와 접하는 서버: WEB 프로젝트
-DB와 접하는 서버: API 프로젝트
-공통으로 사용할 프로젝트: COMMON 프로젝트
-
-#
+- 프로젝트 구조 예시
+    - 사용자와 접하는 서버: WEB 프로젝트
+    - DB와 접하는 서버: API 프로젝트
+    - 공통으로 사용할 프로젝트: COMMON 프로젝트
+    
 
 root 프로젝트 하위에 각 프로젝트(모듈)를 생성합니다.
 
@@ -56,6 +55,7 @@ gradle폴더나 redlew등의 파일이 없고 build.gradle과 src폴더만 존�
 
 ###module-common
 공통으로 사용 될 파일들을 생성합니다.
+
 **module-common/java/com/code/domain/Member.java**
 ```
 @Entity
@@ -106,12 +106,14 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 ```
-######작성한 Entity 클래스와 해당 Entity 의 repository, repository test를 위한 최소한의 의존성 추가
+작성한 Entity 클래스와 해당 Entity 의 repository, repository test를 위한 최소한의 의존성 추가
+
 #
 
 ---
 ###module-api
 module-common의 클래스들을 사용
+
 **module-api/java/MemberServiceCustom.java**
 ```
 @Service
@@ -128,7 +130,8 @@ public class MemberServiceCustom {
     }
 }
 ```
-######MemberRepository의 bean injection 사용
+MemberRepository의 bean injection 사용
+
 #
 **module-api/build.gradle**
 ```
@@ -137,7 +140,7 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 ```
-######의존성 추가
+의존성 추가
 
 #
 
@@ -154,7 +157,8 @@ rootProject.name = 'multi-modules'
 
 include 'module-common', 'module-api', 'module-web'
 ```
-######multi-modules가 module-common, module-api-module-web을 관리한다는 정의
+multi-modules가 module-common, module-api-module-web을 관리한다는 정의
+
 
 
 **multi-modules/gradle.build**
@@ -203,7 +207,8 @@ project(':module-web') {
     }
 }
 ```
-######subprojects와 project()
+subprojects와 project()
+
 
 ###subprojects
 settings.gradle에서 정의해둔 하위 프로젝트들을 관리합니다.
@@ -220,7 +225,7 @@ project(':하위 프로젝트 명') {
     }
   }
 ```
-###### _:_ 디렉토리 path 표시
+ _: 디렉토리 path 표시_
 
 
 ###👉🏻멀티 모듈 구조 완성!
@@ -231,9 +236,10 @@ project(':하위 프로젝트 명') {
 >빌드시에는 자동으로 공통 프로젝트를 포함하여 빌드 진행
 
 하지만 코드를 살펴보면 module-common에는 main메소드가 없기 때문에 프로젝트 빌드에 실패하게됩니다.
-######단순한 참조용 클래스: jar형태로 만들 수 없음
+> 단순한 참조용 클래스: jar형태로 만들 수 없음
 
 ###gradle에서 제공하는 bootRepackage.enabled
+
 **module-common/build.gradle에 추가**
 ```
 bootRepackage {

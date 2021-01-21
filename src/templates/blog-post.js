@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Image from "gatsby-image"
-import styled from "styled-components"
+import Img from "gatsby-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -9,10 +8,12 @@ import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
 
+
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   // const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+  const profileImgFluid = data.file.childImageSharp.fluid
 
   return (
     <Layout location={location} title="Home">
@@ -37,8 +38,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             }}
           >
             {post.frontmatter.date} || {post.frontmatter.writeAuthor}
-            {post.frontmatter.profile}
           </p>
+          <div>
+          <Img fluid={profileImgFluid} alt="Profile Image"/>
+          </div>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
@@ -80,8 +83,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
     </Layout>
   )
 }
-
-
 
 export default BlogPostTemplate
 

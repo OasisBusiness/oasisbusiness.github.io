@@ -4,6 +4,7 @@ import { PageProps, Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import Img from "gatsby-image"
 
 type PageContext = {
   currentPage: number
@@ -24,7 +25,7 @@ type Data = {
           date: string
           description: string
           writeAuthor: string
-          profile
+          profile: file
         }
         fields: {
           slug: string
@@ -47,6 +48,7 @@ const BlogIndex = ({
   const isLast = currentPage === numPages
   const prevPage = currentPage - 1 === 1 ? "/" : `/${currentPage - 1}`
   const nextPage = `/${currentPage + 1}`
+  const profileImgFluid = post.frontmatter.profile.childImageSharp.fluid
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -66,12 +68,7 @@ const BlogIndex = ({
                 </Link>
               </h3>
               <small>{node.frontmatter.date} || {node.frontmatter.writeAuthor}</small>
-              {mdx.frontmatter.profile && (
-                                  <profileImage
-                                    fluid={mdx.frontmatter.banner.childImageSharp.fluid}
-                                    alt="Profile Image"
-                                  />
-                                )}
+              <Img fluid={profileImgFluid} />
             </header>
             <section>
               <p

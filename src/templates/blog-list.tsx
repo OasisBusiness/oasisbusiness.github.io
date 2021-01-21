@@ -24,6 +24,7 @@ type Data = {
           date: string
           description: string
           writeAuthor: string
+          profile
         }
         fields: {
           slug: string
@@ -65,6 +66,12 @@ const BlogIndex = ({
                 </Link>
               </h3>
               <small>{node.frontmatter.date} || {node.frontmatter.writeAuthor}</small>
+              {mdx.frontmatter.profile && (
+                                  <profileImage
+                                    fluid={mdx.frontmatter.banner.childImageSharp.fluid}
+                                    alt="Profile Image"
+                                  />
+                                )}
             </header>
             <section>
               <p
@@ -132,6 +139,13 @@ export const pageQuery = graphql`
             title
             description
             writeAuthor
+            profile {
+                        childImageSharp {
+                            fluid {
+                            ...GatsbyImageSharpFluid
+                            }
+                        }
+                    }
           }
         }
       }

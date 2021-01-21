@@ -1,10 +1,13 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Image from "gatsby-image"
+import styled from "styled-components"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -34,6 +37,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             }}
           >
             {post.frontmatter.date} || {post.frontmatter.writeAuthor}
+            {post.frontmatter.profile}
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -77,6 +81,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   )
 }
 
+
+
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
@@ -95,7 +101,16 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         writeAuthor
+        profile {
+            childImageSharp {
+                fluid {
+                ...GatsbyImageSharpFluid
+                }
+            }
+        }
       }
     }
   }
 `
+
+

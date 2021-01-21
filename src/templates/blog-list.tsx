@@ -25,7 +25,7 @@ type Data = {
           date: string
           description: string
           writeAuthor: string
-          profile: file
+          profile: string
         }
         fields: {
           slug: string
@@ -68,7 +68,7 @@ const BlogIndex = ({
                 </Link>
               </h3>
               <small>{node.frontmatter.date} || {node.frontmatter.writeAuthor}</small>
-              <Img fluid={profileImgFluid} />
+              <Img fluid={profileImgFluid} alt="Profile Image"/>
             </header>
             <section>
               <p

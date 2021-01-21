@@ -7,13 +7,12 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
-
-
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   // const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-  const profileImgFluid = data.file.childImageSharp.fluid
+
+  const profileImgFluid = post.frontmatter.profile.childImageSharp.fluid
 
   return (
     <Layout location={location} title="Home">
@@ -39,9 +38,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           >
             {post.frontmatter.date} || {post.frontmatter.writeAuthor}
           </p>
-          <div>
-          <Img fluid={profileImgFluid} alt="Profile Image"/>
-          </div>
+          <Img fluid={profileImgFluid} alt="Profile Image"
+          />
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr

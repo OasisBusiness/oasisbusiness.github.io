@@ -8,7 +8,7 @@ link: http://renyuanz.github.io
 share: true
 ---
 
-##**오아시스 비즈니스 대표** 문 욱,  
+##**오아시스비즈니스 대표** 문 욱,  
 ***
 ![BossImage](bossillustration.jpg)
 

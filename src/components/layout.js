@@ -5,7 +5,7 @@ import { scale } from "../utils/typography"
 
 import Footer from "./footer"
 import "./global.css"
-import logo from "../assets/oasisLogo.png"
+import logo from "../assets/Logo.png"
 
 
 const Layout = ({ location, title, children }) => {
@@ -103,7 +103,7 @@ const Layout = ({ location, title, children }) => {
           style={{ minHeight: 200 }}
         >
 {header}
-        <div style={{position: "fixed", left: 180, bottom: 250, zIndex: -999 }}>
+        <div>
                   <img src={logo} alt="logo" />
                 </div>
 

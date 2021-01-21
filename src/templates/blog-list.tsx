@@ -64,9 +64,7 @@ const BlogIndex = ({
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
-              <p> || </p>
-              <small>{node.frontmatter.writeAuthor}</small>
+              <small>{node.frontmatter.date} || {node.frontmatter.writeAuthor}</small>
             </header>
             <section>
               <p

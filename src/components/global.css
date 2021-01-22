@@ -11,7 +11,7 @@ body {
   --lightBg: #f5f5f5;
   --textNormal: #181818;
   --textTitle: #181818;
-  --textLink: #0058FF;
+  --textLink: #181818;
   --hr: hsla(0, 20%, 1%, 0.2);
 
   background-color: var(--bg);

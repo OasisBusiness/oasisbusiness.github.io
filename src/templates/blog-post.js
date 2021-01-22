@@ -1,18 +1,17 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import ProfileImage from "../components/profileImage"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   // const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
-  const profileImgFluid = post.frontmatter.profile.childImageSharp.fluid
 
   return (
     <Layout location={location} title="Home">
@@ -36,11 +35,17 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: rhythm(1),
             }}
           >
-            {post.frontmatter.date} || {post.frontmatter.writeAuthor}
+            <div
+                  style={{
+                    display: `flex`,
+                    alignItems: `center`,
+                  }}
+                >
+                <small style={{ textAlign: `center`, }}>{post.frontmatter.date} ||&nbsp;</small> <ProfileImage /> <small>&nbsp;{post.frontmatter.writeAuthor}</small>
+            </div>
           </p>
-          <Img fluid={profileImgFluid} alt="Profile Image"
-          />
         </header>
+        <ProfileImage />
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -100,16 +105,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         writeAuthor
-        profile {
-            childImageSharp {
-                fluid {
-                ...GatsbyImageSharpFluid
-                }
-            }
-        }
       }
     }
   }
 `
-
-

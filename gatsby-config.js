@@ -14,6 +14,15 @@ module.exports = {
     defaultImage: "images/bg.jpeg",
   },
   plugins: [
+  'gatsby-transformer-sharp',
+  'gatsby-plugin-sharp',
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+        name: 'images',
+        path: '${__dirname}/src/assets',
+    },
+  },
       {
         resolve: `gatsby-source-filesystem`,
         options: {

@@ -9,9 +9,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
-import { rhythm } from "../utils/typography"
-
 const ProfileImage = () => {
+
   const data = useStaticQuery(graphql`
     query ProfileImageQuery {
       avatar: file(absolutePath: { regex: "/semin.png/" }) {
@@ -42,23 +41,24 @@ const ProfileImage = () => {
   `)
 
   const { author } = data.markdownRemark.frontmatter.writeAuthor
+
   return (
     <div style={{
                    paddingRight: 10,
                    paddingLeft: 10,
                  }}>
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt="author name"
-        style={{
-          minWidth: 30,
-          borderRadius: `100%`,
-          padding: 10,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      />
+        <Image
+                fixed={data.avatar.childImageSharp.fixed}
+                alt="author name"
+                style={{
+                  minWidth: 30,
+                  borderRadius: `100%`,
+                  padding: 10,
+                }}
+                imgStyle={{
+                  borderRadius: `50%`,
+                }}
+              />
     </div>
   )
 }

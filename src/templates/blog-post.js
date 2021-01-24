@@ -45,7 +45,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </div>
           </p>
         </header>
-        <ProfileImage />
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{

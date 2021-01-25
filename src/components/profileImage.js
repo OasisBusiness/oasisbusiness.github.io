@@ -8,46 +8,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-//import Layout from "../components/layout"
 
 const ProfileImage = () => {
-
-//  const data = useStaticQuery(graphql`
-//    query MyQuery {
-//      site {
-//        id
-//      }
-//      siteBuildMetadata {
-//        id
-//      }
-//      sitePage(component: {}) {
-//        id
-//      }
-//      allImageSharp {
-//        edges {
-//          node {
-//            id
-//          }
-//        }
-//      }
-//      allFile(filter: {extension: {regex: "/(png)/"}, relativeDirectory: {eq: "avatars"}}) {
-//        edges {
-//          node {
-//            base
-//            childrenImageSharp {
-//              fluid {
-//                aspectRatio
-//                base64
-//                sizes
-//                src
-//                srcSet
-//              }
-//            }
-//          }
-//        }
-//      }
-//    }
-//  `)
 
     const data = useStaticQuery(graphql`
         query ProfileImageQuery {
@@ -97,11 +59,6 @@ const ProfileImage = () => {
                 }}
               />
               </div>
-//            {data.allFile.edges.map(({node}) =>
-//            (
-//                <Image fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]}/>
-//            ))}
-
   )
 }
 

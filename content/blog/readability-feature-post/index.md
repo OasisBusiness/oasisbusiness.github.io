@@ -2,7 +2,7 @@
 title: "Gradle? 멀티 모듈!"
 date: "2021-01-20T07:26:03.284Z"
 writeAuthor: semin
-profile: "./semin.png"
+profile: "/semin.png"
 description: "project with SpringBoot"
 categories: [paragraph, feature photo]
 comments: true

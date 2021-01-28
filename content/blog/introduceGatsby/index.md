@@ -1,5 +1,5 @@
 ---
-title: "Oasisbusiness Tech-Blog w/ Gatsby"
+title: "GATSBY: OUR BLOG"
 date: "2021-01-27T07:26:03.284Z"
 writeAuthor: semin
 description: "project with SpringBoot"
@@ -11,7 +11,7 @@ credit: Greg Rakozy
 creditlink: https://unsplash.com/photos/oMpAz-DN-9I
 ---
 안녕하세요!  
-오늘은 오아시스 블로그를 개설하면서 용한 gatsby에 대해 알아보도록 하겠습니다.
+오늘은 오아시스 블로그를 개설하면서 이용한 gatsby에 대해 알아보도록 하겠습니다.
 
 ##What is Gatsby?
 

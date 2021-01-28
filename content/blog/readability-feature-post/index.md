@@ -288,6 +288,6 @@ jar { enabled = true }
 
 ---
 
->참조 사이트: 기억보단 기록을, "gradle 멀티모듈", https://jojoldu.tistory.com/123, (2021.01.20)
+######참조 사이트: 기억보단 기록을, "gradle 멀티모듈", https://jojoldu.tistory.com/123, (2021.01.20)
 
 #

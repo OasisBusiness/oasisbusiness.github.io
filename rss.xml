@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[oasisbusiness]]></title><description><![CDATA[A simple, fixed sidebar two columns Gatsby.js blog starter.]]></description><link>https://oasisbusiness.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 28 Jan 2021 07:51:32 GMT</lastBuildDate><item><title><![CDATA[GATSBY: OUR BLOG]]></title><description><![CDATA[안녕하세요! 오늘은 오아시스 블로그를 개설하면서 이용한 gatsby에 대해 알아보도록 하겠습니다. What is Gatsby? 페이지 생성에는 여러가지 방식이있다.  SSR 방식 페이지 접근 시 DB에서 정보를 받아와 HTML 생성 CSR 방식 API…]]></description><link>https://oasisbusiness.github.io/introduceGatsby/</link><guid isPermaLink="false">https://oasisbusiness.github.io/introduceGatsby/</guid><pubDate>Wed, 27 Jan 2021 07:26:03 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요!&lt;br&gt;
+오늘은 오아시스 블로그를 개설하면서 이용한 gatsby에 대해 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;h2&gt;What is Gatsby?&lt;/h2&gt;
+&lt;p&gt;페이지 생성에는 여러가지 방식이있다. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;SSR 방식&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;페이지 접근 시 DB에서 정보를 받아와 HTML 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CSR 방식&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;API로 페이지 정보를 받아와 HTML 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;원하는 시점에 빌드하여 페이지 생성&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;배포시점에 모든 페이지 정보들이 생성되어 별도의 앱서버가 필요 없음&lt;/em&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;이 중 Gatsby는 3번 방식을 이용하여 페이지를 생성합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GraphQL를 통해 빌드 시점에 정적 페이지를 생성하는 Gatsby JS&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Gatsby is a React-based open source framework with performance, scalability and security built-in.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;즉, Gatsby는 리액트 기반의 오픈 소스 프레임워크로,&lt;br&gt;
+graphQL을 통해 가져온 정보들을 HTML, CSS, React로 만들어진 컴포넌트 UI와 연결하여 사이트로 생성합니다.&lt;/p&gt;
+&lt;h2&gt;How to use?&lt;/h2&gt;
+&lt;h3&gt;Gatsby 설치하고 실행하기&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Gatsby CLI 이용하기&lt;br&gt;
+Gatsby CLI는 Webpack, Reachjs, React-route 등을 포함하고 있으므로 간단히 이용할 수 있도록 도와줍니다.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;npm install --global gatsby-cli&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gatsby로 새 프로젝트 생성하기&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;gatsby new 프로젝트명&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;해당 프로젝트로 이동하기&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;cd 프로젝트 폴더명&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gatsby 개발모드로 시작하기&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;gatsby develop&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;구조 파악하기&lt;/h3&gt;
+&lt;p&gt;설치 및 개발 준비가 끝났다면 전체적인 구조를 살펴보겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;설정 파일&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;gatsby-config.js&lt;br&gt;
+Gatsby의 기본 구성 파일로 사이트 제목, 설명, 플러그인 등 사이트 메타 데이터를 지정합니다.&lt;/li&gt;
+&lt;li&gt;gatsby-browser.js&lt;br&gt;
+Gatsby 브라우저 API를 사용할 경우 사용합니다.&lt;/li&gt;
+&lt;li&gt;gatsby-node.js&lt;br&gt;
+Gatsby 노드 API를 사용할 경우 해당하는 사용법을 정의합니다.&lt;/li&gt;
+&lt;li&gt;gatsby-ssr.js&lt;br&gt;
+Gatsby 서버 사이드 렌더링 API를 사용하는 경우 해당하는 사용법을 정의합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;프로젝트 구조&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;/public: gatsby build의 Output이 위치한다.&lt;/p&gt;
+&lt;p&gt;/plugins: npm에 포함되지 않은 라이브러리나 플러그인을 넣는다.&lt;/p&gt;
+&lt;p&gt;/src/pages: 파일 이름 및 폴더 이름을 경로로하여 따라간다.&lt;/p&gt;
+&lt;p&gt;/src/components: 컴포넌트들을 모아둔 폴더&lt;/p&gt;
+&lt;p&gt;/src/images: 이미지들을 모아둔 폴더&lt;/p&gt;
+&lt;p&gt;/static: 저장된 파일을 Webpack에서 처리하지 않고 공용 폴더에 복사되는 폴더가 존재한다.&lt;/p&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;구조를 모두 파악했다면, 이제 블로그를 만들 수 있습니다!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;Let’s make Blog with Gatsby&lt;/h1&gt;
+&lt;h2&gt;Write Post - Markdown&lt;/h2&gt;
+&lt;p&gt;Gatsby 블로그에서는 post를 markdown을 이용해 작성합니다.
+markdown은 사용되는 폭이 넓기때문에 재사용하기가 편리합니다.&lt;/p&gt;
+&lt;p&gt;Markdown 파일을 읽어 정적 HTML로 만들기 위해서는,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;‘gatsby-source-filesystem’로 마크다운 파일 읽어들이기&lt;/li&gt;
+&lt;li&gt;‘gatsby-transform-remark’로 마크다운 파일 해석하기&lt;/li&gt;
+&lt;li&gt;해석한 데이터를 GraphQL로 가져오기&lt;/li&gt;
+&lt;li&gt;가져온 정보를 미리 설정해둔 템플릿에 배치하기&lt;/li&gt;
+&lt;li&gt;Gatsby의 createPageAPI를 이용해 정적페이지 만들기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;의 절차를 거칩니다.&lt;/p&gt;
+&lt;h3&gt;세팅하기&lt;/h3&gt;
+&lt;p&gt;해당 절차 중 &lt;code class=&quot;language-text&quot;&gt;&amp;#39;gatsby-source-filesystem&amp;#39;&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;&amp;#39;gatsby-transform-remark&amp;#39;&lt;/code&gt;는 gatsby 플러그인으로써 gatsby-config.js에 세팅해야합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/gatsby-config.js
+
+plugins: [
+ {
+ resolve: `gatsby-source-filesystem`,
+ options: {
+ name: `markdown-pages`,
+ path: `${__dirname}/src/마크다운 파일의 폴더`,
+   },
+ },
+ `gatsby-transformer-remark`,
+]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;템플릿을 이용하여 마크다운을 HTML로 변경하기&lt;/h3&gt;
+&lt;p&gt;GraphQL을 이용해 가져온 마크다운 데이터 정보를 템플릿을 통해 HTML파일로 재정의하도록 도와줍니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/gatsby-config.js
+import React from &amp;quot;react&amp;quot;
+import { graphql } from &amp;quot;gatsby&amp;quot;
+
+export default function Template({data}) {
+  const { markdownRemark: { frontmatter, html } } = data;
+  return (
+    &amp;lt;div&amp;gt;
+        &amp;lt;h1&amp;gt;{frontmatter.title}&amp;lt;/h1&amp;gt;
+        &amp;lt;h2&amp;gt;{frontmatter.date}&amp;lt;/h2&amp;gt;
+        &amp;lt;div
+          dangerouslySetInnerHTML={{ __html: html }}
+        /&amp;gt;
+    &amp;lt;/div&amp;gt;
+  )
+}
+
+export const pageQuery = graphql`
+  query($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
+      frontmatter {
+        date(formatString: &amp;quot;YYYY년 MM월 DD일 &amp;quot;)
+        path
+        title
+      }
+    }
+  }
+`&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;템플릿을 정적 HTML로 만들기&lt;/h3&gt;
+&lt;p&gt;Node.js API를 이용하여 정적페이지를 만들기때문에 gatsby-node.js에 세팅이 필요합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const path = require(&amp;quot;path&amp;quot;)
+
+exports.createPages = ({ actions, graphql }) =&amp;gt; {
+  const { createPage } = actions
+
+  const blogPostTemplate = path.resolve(`템플릿 파일`)
+
+  return graphql(`
+    {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `).then(result =&amp;gt; {
+    if (result.errors) {
+      return Promise.reject(result.errors)
+    }
+
+    result.data.allMarkdownRemark.edges.forEach(({ node }) =&amp;gt; {
+      createPage({
+        path: node.frontmatter.path,
+        component: blogPostTemplate,
+        context: {},
+      })
+    })
+  })
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;GraphQL의 allMarkdownRemark가 모든 마크다운을 읽어오면 edges 각각의 node( markdown ) 정보가 들어에가고 이를 createPage에서 템플릿과 합성하여 실제 정적 파일을 생성합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;result.data.allMarkdownRemark.edges.forEach(({ node })&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;frontmatter로 전해지는 정보&lt;/h3&gt;
+&lt;p&gt;그렇다면 frontmatter로 전해지는 정보는 어떻게 전달되는걸까?&lt;br&gt;
+바로 각 Markdown post 상단에 GraphQL이 인식할 수 있는 형식으로 정보를 작성하면됩니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;---
+path: &amp;quot;url&amp;quot;
+date: &amp;quot;생성 일자&amp;quot;
+title: &amp;quot;타이틀 정보&amp;quot;
+---&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;정보는 ---로 감싸도록하고 path정보를 꼭 작성해야합니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;이제 모든 블로그 작성 준비가 끝났습니다.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;이렇게 알아본 방법으로 여러분도 gatsby를 이용해 자신만의 독창적인 블로그를 만들 수 있습니다!&lt;/p&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h6&gt;참조 사이트: 박성룡, “gatsby”, &lt;a href=&quot;https://pks2974.medium.com/gatsby-%EB%A1%9C-blog-%EB%A7%8C%EB%93%A4%EA%B8%B0-ac3eed48e068&quot;&gt;https://pks2974.medium.com/gatsby-%EB%A1%9C-blog-%EB%A7%8C%EB%93%A4%EA%B8%B0-ac3eed48e068&lt;/a&gt;, (2021.01.27)&lt;/h6&gt;
+&lt;h1&gt;&lt;/h1&gt;</content:encoded></item><item><title><![CDATA[Gradle? 멀티 모듈!]]></title><description><![CDATA[Gradle IntelliJ를 시작하고 gradle로 프로젝트를 생성하고 SpringBoot로 프로젝트 개발 환경을 바꿔주고.. 이것저것 개발 환경을 바꿀 때 마다 이게 뭐길래 이걸로 하는걸까?싶었고 그 첫 번째 관문에서 마주친 것이 바로 gradle…]]></description><link>https://oasisbusiness.github.io/readability-feature-post/</link><guid isPermaLink="false">https://oasisbusiness.github.io/readability-feature-post/</guid><pubDate>Wed, 20 Jan 2021 07:26:03 GMT</pubDate><content:encoded>&lt;h3&gt;Gradle&lt;/h3&gt;
+&lt;p&gt;IntelliJ를 시작하고 gradle로 프로젝트를 생성하고 SpringBoot로 프로젝트 개발 환경을 바꿔주고..&lt;/p&gt;
+&lt;p&gt;이것저것 개발 환경을 바꿀 때 마다 이게 뭐길래 이걸로 하는걸까?싶었고&lt;/p&gt;
+&lt;p&gt;그 첫 번째 관문에서 마주친 것이 바로 gradle.&lt;/p&gt;
+&lt;h2&gt;멀티 모듈&lt;/h2&gt;
+&lt;p&gt;다중 프로젝트로 구성된 서비스에서 각 서버들마다 &lt;em&gt;공통으로 존재하는 클래스들&lt;/em&gt; 을 효율적으로 다뤄주는 것이 바로,
+&lt;strong&gt;Gradle Multi Module&lt;/strong&gt; 방식입니다.&lt;/p&gt;
+&lt;p&gt;각 서버에 동일한 클래스가 존재한다하여 그저 복사 붙여넣기에 의존하다가는 프로젝트의 규모가 커질경우
+감당하기 힘든 수정의 늪에 빠지게 될 수 있습니다.
+실수 또한 피할 수 없겠죠&lt;/p&gt;
+&lt;p&gt;그래서 복사 붙여넣기로 모든 서버에 동일 클래스를 존재시키는 것이 아니라
+공통 클래스를 한 번만 생성하여 사용할 수 있도록 프로젝트를 구성합니다.&lt;/p&gt;
+&lt;p&gt;즉, 공통 프로젝트를 &lt;strong&gt;모듈&lt;/strong&gt;화하여 프로젝트 안에 갖고 있는 구조입니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;이 때 개발을 하고, 빌드를 할 때 만족해야하는 조건이 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;개발시에는 즉각적으로 공통 프로젝트 코드 사용이 용이&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;빌드시에는 자동으로 공통 프로젝트를 포함하여 빌드 진행&lt;/p&gt;
+&lt;hr&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;h2&gt;멀티 모듈 설계&lt;/h2&gt;
+&lt;h3&gt;구조&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 375px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5bc9674957e071578fd613bc930fabce/5ff7e/projServe.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 32.43243243243243%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVQY03WRz0sCURDHR0OToqAg+hvWW3sLPEQd61KHTl0i6hLhyehknQyiKBMU6+DiYlIES65o7sFddNddFiHBxR9XCQIvXjIQgmnWgyDSwDyYeZ/58p334Ntc6/StLZQuFvZ9m35fo2FhQSqgKIpoWRaeB4Pb9+HwSbvdRkmS0DTNYR8AmHw+/9xqtTCbzWKtVsNms2lAl1u66/LLH6kjF3uYxBm9oqVUVS2Uy+Wspqrvp4GAt1QqMZVKRZRl+UXXdaFYLCZJcJZ6O1QrdP9mGIZMc2eAv6tgx9OxByINBMTxvAyFoNfrAc/ziySwQqJemxczmQnWTjqu4IaAV7/HEcpNAtNut5PWeSQnP5QDcjOgtb+q1epuvV63GeeYYOd6Dj5v56GPG0OnD/E4cBwHiUTCwbIsMAzjImeqoihIKyEJItVITgP0ZkDiU8TaPEQiEfg3aAjS6TREo1G7dAqCsJ7L5Q7oI/ZisRgzckShadpo7g8Bpgys+HTohAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;projServe&quot;
+        title=&quot;projServe&quot;
+        src=&quot;/static/5bc9674957e071578fd613bc930fabce/5ff7e/projServe.png&quot;
+        srcset=&quot;/static/5bc9674957e071578fd613bc930fabce/12f09/projServe.png 148w,
+/static/5bc9674957e071578fd613bc930fabce/e4a3f/projServe.png 295w,
+/static/5bc9674957e071578fd613bc930fabce/5ff7e/projServe.png 375w&quot;
+        sizes=&quot;(max-width: 375px) 100vw, 375px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;프로젝트 구조 예시&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자와 접하는 서버: WEB 프로젝트&lt;/li&gt;
+&lt;li&gt;DB와 접하는 서버: API 프로젝트&lt;/li&gt;
+&lt;li&gt;공통으로 사용할 프로젝트: COMMON 프로젝트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;root 프로젝트 하위에 각 프로젝트(모듈)를 생성합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;multi-modules&lt;/strong&gt; / module-api, module-web, module-common&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;module-common: 공통 프로젝트&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이 때 root 프로젝트를 기준으로 빌드가 이루어지기 때문에 하위 프로젝트에는
+gradle폴더나 redlew등의 파일이 없고 build.gradle과 src폴더만 존재한다는 점을 인지합니다.&lt;/p&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h3&gt;module-common&lt;/h3&gt;
+&lt;p&gt;공통으로 사용 될 파일들을 생성합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;module-common/java/com/code/domain/Member.java&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@Entity
+public class Member {
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @Column
+    private String name;
+
+    @Column
+    private String email;
+
+    public Member() {
+    }
+
+    public Member(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;module-common/java/com/code/repository/MemberRepository.java&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;public interface MemberRepository extends JpaRepository&amp;lt;Member, Long&amp;gt; {
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;module-common/build.gradle&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;dependencies {
+    compile(&amp;#39;org.springframework.boot:spring-boot-starter-data-jpa&amp;#39;)
+    runtime(&amp;#39;com.h2database:h2&amp;#39;)
+    testCompile(&amp;#39;org.springframework.boot:spring-boot-starter-test&amp;#39;)
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;작성한 Entity 클래스와 해당 Entity 의 repository, repository test를 위한 최소한의 의존성 추가&lt;/p&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h3&gt;module-api&lt;/h3&gt;
+&lt;p&gt;module-common의 클래스들을 사용&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;module-api/java/MemberServiceCustom.java&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@Service
+public class MemberServiceCustom {
+
+    private MemberRepository memberRepository;
+
+    public MemberServiceCustom(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
+    public Long signup (Member member) {
+        return memberRepository.save(member).getId();
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;MemberRepository의 bean injection 사용&lt;/p&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;module-api/build.gradle&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;dependencies {
+    compile(&amp;#39;org.springframework.boot:spring-boot-starter-web&amp;#39;)
+    testCompile(&amp;#39;org.springframework.boot:spring-boot-starter-test&amp;#39;)
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;의존성 추가&lt;/p&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h3&gt;root 프로젝트의 settings.gradle&lt;/h3&gt;
+&lt;h4&gt;module-api가 공통 프로젝트를 사용할 수 있고 spring boot 관련 의존성이 관리 되도록&lt;/h4&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;multi-modules/settings.gradle&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;rootProject.name = &amp;#39;multi-modules&amp;#39;
+
+include &amp;#39;module-common&amp;#39;, &amp;#39;module-api&amp;#39;, &amp;#39;module-web&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;multi-modules가 module-common, module-api-module-web을 관리한다는 정의&lt;/p&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;multi-modules/gradle.build&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;buildscript {
+    ext {
+        springBootVersion = &amp;#39;1.5.1.RELEASE&amp;#39;
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath(&amp;quot;org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}&amp;quot;)
+        classpath &amp;quot;io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE&amp;quot;
+    }
+}
+
+subprojects {
+    group &amp;#39;com.blogcode&amp;#39;
+    version &amp;#39;1.0&amp;#39;
+
+    apply plugin: &amp;#39;java&amp;#39;
+    apply plugin: &amp;#39;spring-boot&amp;#39;
+    apply plugin: &amp;#39;io.spring.dependency-management&amp;#39;
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testCompile group: &amp;#39;junit&amp;#39;, name: &amp;#39;junit&amp;#39;, version: &amp;#39;4.12&amp;#39;
+    }
+}
+
+project(&amp;#39;:module-api&amp;#39;) {
+    dependencies {
+        compile project(&amp;#39;:module-common&amp;#39;)
+    }
+}
+
+project(&amp;#39;:module-web&amp;#39;) {
+    dependencies {
+        compile project(&amp;#39;:module-common&amp;#39;)
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;subprojects와 project()&lt;/p&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;h3&gt;subprojects&lt;/h3&gt;
+&lt;p&gt;settings.gradle에서 정의해둔 하위 프로젝트들을 관리합니다.&lt;/p&gt;
+&lt;p&gt;하위 프로젝트들의 의존성과 관련된 plugin을 등록합니다. ex)SpringBoot, Java&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;root 프로젝트의 의존성까지 관리하고자 하면 allprojects로 관리합니다.&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;project&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;project(&amp;#39;:하위 프로젝트 명&amp;#39;) {
+  dependencies {
+    complie project(&amp;#39;:의존하고있는 공통 프로젝트 명&amp;#39;)
+    }
+  }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;: 디렉토리 path 표시&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;👉🏻멀티 모듈 구조 완성!&lt;/h3&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;위에서 얘기했던 멀티 모듈 빌드시 만족 조건을 기억하시나요?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;빌드시에는 자동으로 공통 프로젝트를 포함하여 빌드 진행&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;하지만 코드를 살펴보면 module-common에는 main메소드가 없기 때문에 프로젝트 빌드에 실패하게됩니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;단순한 참조용 클래스: jar형태로 만들 수 없음&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;gradle에서 제공하는 bootRepackage.enabled&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;module-common/build.gradle에 추가&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;bootRepackage {
+    enabled = false
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;스프링 부트 2.0 이상&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;bootJar { enabled = false }
+jar { enabled = true }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;이로써 빌드까지 완벽히 가능한, 멀티 모듈 구조를 알아보고 함께 작성까지 해보았습니다!
+멀티 모듈 구조를 이용하려는 분들에게 유용한 자료가 됐길 바랍니다.&lt;/p&gt;
+&lt;p&gt;감사합니다.&lt;/p&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h6&gt;참조 사이트: 기억보단 기록을, “gradle 멀티모듈”, &lt;a href=&quot;https://jojoldu.tistory.com/123&quot;&gt;https://jojoldu.tistory.com/123&lt;/a&gt;, (2021.01.20)&lt;/h6&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn-2&quot;&gt;
+&lt;p&gt;멀티 모듈 빌드&lt;/p&gt;
+&lt;a href=&quot;#fnref-2&quot; class=&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content:encoded></item><item><title><![CDATA[ABOUT]]></title><description><![CDATA[Our Services 오아시스 비즈니스는 창업을 준비 중인 에비창업가와 가맹점을 더 확장하고 싶은 파트너사와의 매칭을 돕습니다.  오아시스 비즈니스는 정부 지원 사업인 데이터 바우처에 선정된 경쟁력을 바탕으로 상권 분석 자료가 AI…]]></description><link>https://oasisbusiness.github.io/sample-post/</link><guid isPermaLink="false">https://oasisbusiness.github.io/sample-post/</guid><pubDate>Sat, 16 Jan 2021 07:26:03 GMT</pubDate><content:encoded>&lt;h2&gt;Our Services&lt;/h2&gt;
+&lt;h3&gt;오아시스 비즈니스는 창업을 준비 중인 에비창업가와 가맹점을 더 확장하고 싶은 파트너사와의 매칭을 돕습니다.&lt;/h3&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;오아시스 비즈니스는 정부 지원 사업인 데이터 바우처에 선정된 경쟁력을 바탕으로 상권 분석 자료가 &lt;strong&gt;AI 기반&lt;/strong&gt;으로 정보를 제공하는 &lt;strong&gt;‘오아시스 비즈니스’ 플랫폼&lt;/strong&gt;을 개발하여
+창업자에게 프랜차이즈 및 상가 등 조건에 맞는 견적서를 제공하고 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3e20811fa5811ceb8f29d336d4ec4463/1cfc2/aboutOasis.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 45.94594594594595%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABNElEQVQoz63MTU/CQBAG4P0b3jQRqKgRKxQIugWFYiwFFOQjeJFEb/qbDQRa2LSQmHh93dmFpHjywOHJvDO7M+zg/gf7xA6r3/iPo5jDPzmOGfYaRlmSNRXHd/sk351Rn9z0Rgy7KEUgGemKRzC5roW7CCVnpXLWjpCXfa4i32Q2b/S7VdE5s7lBWCEvYOUEml6I0SjCi9R5CjHoR+h2QjVvt0K8v60wftVo/vmxxni8UrxGiFxWgG4x2wzALwNUrQD1YgCnEMC1Fxi1BQaewKOzRL8hMGwKtGtLVYnLF2rHKWp0g26x+vkMxDmboSZV0zO0rDmGtwEGZR89rlF+vvbRLfkYVny45lz9VXun+gZhzZMptlokPUUjNcHDsZSYwN1QOanRm2fov9u97Q3WS3xhn34B/FGtn+LIQk0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Smithsonian Image&quot;
+        title=&quot;Smithsonian Image&quot;
+        src=&quot;/static/3e20811fa5811ceb8f29d336d4ec4463/fcda8/aboutOasis.png&quot;
+        srcset=&quot;/static/3e20811fa5811ceb8f29d336d4ec4463/12f09/aboutOasis.png 148w,
+/static/3e20811fa5811ceb8f29d336d4ec4463/e4a3f/aboutOasis.png 295w,
+/static/3e20811fa5811ceb8f29d336d4ec4463/fcda8/aboutOasis.png 590w,
+/static/3e20811fa5811ceb8f29d336d4ec4463/efc66/aboutOasis.png 885w,
+/static/3e20811fa5811ceb8f29d336d4ec4463/1cfc2/aboutOasis.png 900w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;오아시스 비즈니스는 빅데이터 매칭 알고리즘 기반의 업종, 점포 맞춤 견적 O2O 플랫폼의 기술력과 잠재력을 인정받아 &lt;strong&gt;벤처기업 인증&lt;/strong&gt;을 획득했는데요.
+벤처 인증은 &lt;em&gt;공식 기관의 검증&lt;/em&gt; 이기에, 창업자들에게 제공하는 지원과 정보의 신뢰도 및 범위가 확장되었음을 의미하기도 합니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 438px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/35a20c9d93a20113c631a1b75286fb17/50e4b/ventureBusiness.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 145.94594594594594%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAdCAYAAACqhkzFAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEnklEQVRIx31V246jRhD1T+cf8gN5zOtKWWmjSFGkzUWaaGZ3M7e9ZGY8HhvbgMEGXzDY2IBvnJyqBsZPeSiabprT51RVV7WORYpdMqGNcViH2K8CneexjyIe03zzneuFWDKu1sfmnd+K2MM+neK036K1S3wk3gOS0Mbc62Lhd7Ge2QpSVKBymM7Vxs26ATSgm6BN0BlaeTREnoRIkyVmgYd4ESJPExx3WxzI/lhs9N1YRhZZM5b7XEc+IMQKGgFtlVPyh3KX4kQQnHLgsAX2G2PH3KyVhXk/ZPr9kK8hLhPQIh6pkla+GCplYXLIErXnx0cMrS6cgQXPGXDso/fSwdPDI1x7gBHNd4cNqAIuXWXZypeGoQFckeEaf7z/E7f/3ODr/Wf0Om18/PAJFxeXuLz8iNubOwI/oM1DhfUrIBnGNWDF8Jiv1HDcGsl0AT1tZItMkV27YV/tJ4ET3bUTyYy2BkUipumTLlGkEfL1Atlqzn9iZMmc84jzam2bNK45ig9zUbUxkg2gzYnPgGywnHqYjR0sghGC0QCb5RRTb4go9BDxWzxj+vAQccspN+4RK1Wygx1lV4CeRni9CBAFLuKpr+DrKMDMHyprsd0Z+yyZYSsW08i+UBy3ijIBJV3Wi4kCzidkOXGRLkPcfPgb7W/38J0eArcPz+7B7XcQ8qBkPlbWCXNXASP3nCElhyP4wy5l2/D5o5zu9p/hDV/I1MZqPiGArwoKMsWOckUyg2IAneqmUHtJhgI4caxm3MZTjO0uRoMXZS2SU7phRWYyHraxmgTHANpGck6GsrhejBFSlgCK9M0yIHBPWY85JmQ3cS2dz6nCAC7PAIXhYlD5UOivUOYJTllsRhpLzGsuUiIOG5OfYipXvp9JlpftwmFq+BjR2RLVkCkTkMmYfhTpHhk5Fn1J6cJu6g30m+wXxiH9q8QUkDclW7gIPRv9zoP+JFEUvzm9tr67VseMtGH3SQ+QQ2OmlrgnZb5qttSAecSEnozoJ0ujKZsloet5DTD1JPpkRIYJ00XcoG5ihpxF2daCKVGWj0deKRlP6sOVmqZGZbX/yuq2yH7J4SaxCy0OY43UnlHbM2p1OjTv1d0VgA1TyXr+F1MyH5H5hFnhO31eu+rqFU35Ss2PZwDmPW6qkBwq6wIq10+unrmKkcqVitMqYud/AOuq8goo1hSFSroUh11dbQRwXwEe80SLrLG6TL0C1VbvaQ6QeiiSG0C2T1k836z94vxHbVhyaFrNTS2UPSc2q10sLUABbe2pR4a+lJsgN+KUqRz5USs3G1PJ23DiHrHyVOAQONi8f4f0159QPH4hxqTuKX2UWQ7L+x7vfv8OnXaIi8t7XN+1tUHdfLrC59trtadvX9BtP8CyXnD19g06P/6A7Le3yC7/Io8KsFgOlHayvoPrXbIvJ3AcVuxJwP4ca6+eB7726zXL2SrirWDJn3+9xvyXN2T5M/KbK6ZYWAMOVTuOJaUeTSE4bbVRiTyeZpqTjNKoOJbiBkn65QT7uc/tCdNmwFgEaIlz87mFrLE+spllTOaznq7J5VeT92ouAVWLpGLZ2k7/AyHkjVsFETVaAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Smithsonian Image&quot;
+        title=&quot;Smithsonian Image&quot;
+        src=&quot;/static/35a20c9d93a20113c631a1b75286fb17/50e4b/ventureBusiness.png&quot;
+        srcset=&quot;/static/35a20c9d93a20113c631a1b75286fb17/12f09/ventureBusiness.png 148w,
+/static/35a20c9d93a20113c631a1b75286fb17/e4a3f/ventureBusiness.png 295w,
+/static/35a20c9d93a20113c631a1b75286fb17/50e4b/ventureBusiness.png 438w&quot;
+        sizes=&quot;(max-width: 438px) 100vw, 438px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;벤처기업 인증을 받은 오아시스 비즈니스는 예비창업자가 창업 조건을 입력만 하면 창업 비용+점포비용 비교견적을 한 번에 알려주는 서비스입니다.
+창업박람회, 프랜차이즈 설명회, 부동산 등 직접 찾아다닐 필요 없이 실시간으로 상권분석부터 점포 물색까지 오아시스 비즈니스에서 쉽고, 간단하고, 빠르게 한 번에 비교해 보실 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2cb707f469537b357d792d55271f8afc/58213/servicePic.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACAklEQVQoz32SS2gTURiFgysXIroQcaFYtXUhtkVolSjGx8JqRImooAtxawKusnHtroQIRTdqW0uitWJRcKOEkI0iKEpDUEpjTfMem4dpM81kJpl8ziSZaSLigct/uY9z/3PusTQaDXTotXPoqMoKgfdL/FgqMr+YJ/Qxwd+o1+vmfR0WY6Kq61VV1eY8mSmyy/qIjX1jbOi5R/+In7JYoVgoIMsyfr8fp9NJOBxu31WxdLIbpAaS6QK7jz6m1zZJj22aoYszZDICsdhPstksbrcbh8PRJDa6tdTbJMEPac7efMvU7AI1pcLq6goLiyn2n55hYOQ5Q1feYb36hrU1SXu4JTMSieDz+SiVSqZsS63Wkndn9BM7Dj/j8q0A+ZxAIh7n69w8g+df0XvqJduHp7l2O4AkKf/30JAZT5e5O/aFz2FB39YOqMQSy+yzTbBl4AmbDk5x8vprRK1DSao0CUKhEB6PR7Mhs+6hwVwWFcLf8wi5ivl6LJHT5ProOzHJnmPjWC+9IK15GI1GSaVSuFwu7HZ7t4cGYXa5zNw3AUGrnYR7j0+w88g42w49ZPDcU0RRav6wriwYDOL1ekkmk//qUG6SlsWq6Uc6W2D4gp+t/Q/YfOA+Z27MUm9HSkexWGx+TGeWu2JjwAx2VSaX/82vXGuUVsSu8OsSFUUxc6uv/QHSdrS26pFLdwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Smithsonian Image&quot;
+        title=&quot;Smithsonian Image&quot;
+        src=&quot;/static/2cb707f469537b357d792d55271f8afc/fcda8/servicePic.png&quot;
+        srcset=&quot;/static/2cb707f469537b357d792d55271f8afc/12f09/servicePic.png 148w,
+/static/2cb707f469537b357d792d55271f8afc/e4a3f/servicePic.png 295w,
+/static/2cb707f469537b357d792d55271f8afc/fcda8/servicePic.png 590w,
+/static/2cb707f469537b357d792d55271f8afc/efc66/servicePic.png 885w,
+/static/2cb707f469537b357d792d55271f8afc/58213/servicePic.png 902w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[OASIS CREW]]></title><description><![CDATA[…]]></description><link>https://oasisbusiness.github.io/sample-link-post/</link><guid isPermaLink="false">https://oasisbusiness.github.io/sample-link-post/</guid><pubDate>Fri, 15 Jan 2021 07:26:03 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;strong&gt;오아시스비즈니스 대표&lt;/strong&gt; 문 욱,&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7f2595992e65c39a39080a7a614c39d2/3acf0/bossillustration.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECBAP/xAAZAQACAwEAAAAAAAAAAAAAAAACAwABBAX/2gAMAwEAAhADEAAAAdlOFwPYyrkQMX3HL1f/xAAcEAABBQADAAAAAAAAAAAAAAABAAIDERIiMTL/2gAIAQEAAQUCmdlgl5F9KaS3S61RR9WU3r//xAAaEQADAAMBAAAAAAAAAAAAAAAAAQISITEy/9oACAEDAQE/AVM8MEN7J8n/xAAZEQEBAAMBAAAAAAAAAAAAAAABAAIDEjL/2gAIAQIBAT8BVurEOS2+2//EABsQAAICAwEAAAAAAAAAAAAAAAABAjEQEiFh/9oACAEBAAY/ArIxeyLNEupkOe5t4//EABwQAAMBAAIDAAAAAAAAAAAAAAABESExQYHB8f/aAAgBAQABPyHTrldDWko8sKJ6G8oPMGaTpLTg1PUcz7p9Ae7dP//aAAwDAQACAAMAAAAQjxc+/8QAGREAAwEBAQAAAAAAAAAAAAAAAAERMSFB/9oACAEDAQE/EFFGl/B1dMj/xAAaEQACAgMAAAAAAAAAAAAAAAAAARFBITGh/9oACAECAQE/EGXNGFmoUjrP/8QAHBABAAMBAQADAAAAAAAAAAAAAQARITFBUYGh/9oACAEBAAE/EGvM+A6uRxxajppmod/Hj8gumyYJRfIxsLZY1pc3mPdZkinoOyjgfeNYivq3P//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;BossImage&quot;
+        title=&quot;BossImage&quot;
+        src=&quot;/static/7f2595992e65c39a39080a7a614c39d2/1c72d/bossillustration.jpg&quot;
+        srcset=&quot;/static/7f2595992e65c39a39080a7a614c39d2/a80bd/bossillustration.jpg 148w,
+/static/7f2595992e65c39a39080a7a614c39d2/1c91a/bossillustration.jpg 295w,
+/static/7f2595992e65c39a39080a7a614c39d2/1c72d/bossillustration.jpg 590w,
+/static/7f2595992e65c39a39080a7a614c39d2/a8a14/bossillustration.jpg 885w,
+/static/7f2595992e65c39a39080a7a614c39d2/fbd2c/bossillustration.jpg 1180w,
+/static/7f2595992e65c39a39080a7a614c39d2/3acf0/bossillustration.jpg 2000w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;국밥집을 창업하려다 정보의 비대칭을 경험하고 직접 경험한 불편함과 그간의 부동산업경험을 바탕으로 오아시스비즈니스를 개발/운영 중&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;무수한 창업 정보 속에서, 내 조건에 맞는 창업 정보만 알려주는 공간이 있으면 어떨까?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;최종 목적지는 &lt;strong&gt;모두의 성공&lt;/strong&gt;, 오아시스비즈니스의 서비스를 사용하는 사람들이 성공해야 비로소 우리의 성공이라고 말할 수 있다.&lt;/p&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2&gt;&lt;strong&gt;오아시스 비즈니스 개발이사&lt;/strong&gt; 박 주형,&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7f2595992e65c39a39080a7a614c39d2/3acf0/bossillustration.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECBAP/xAAZAQACAwEAAAAAAAAAAAAAAAACAwABBAX/2gAMAwEAAhADEAAAAdlOFwPYyrkQMX3HL1f/xAAcEAABBQADAAAAAAAAAAAAAAABAAIDERIiMTL/2gAIAQEAAQUCmdlgl5F9KaS3S61RR9WU3r//xAAaEQADAAMBAAAAAAAAAAAAAAAAAQISITEy/9oACAEDAQE/AVM8MEN7J8n/xAAZEQEBAAMBAAAAAAAAAAAAAAABAAIDEjL/2gAIAQIBAT8BVurEOS2+2//EABsQAAICAwEAAAAAAAAAAAAAAAABAjEQEiFh/9oACAEBAAY/ArIxeyLNEupkOe5t4//EABwQAAMBAAIDAAAAAAAAAAAAAAABESExQYHB8f/aAAgBAQABPyHTrldDWko8sKJ6G8oPMGaTpLTg1PUcz7p9Ae7dP//aAAwDAQACAAMAAAAQjxc+/8QAGREAAwEBAQAAAAAAAAAAAAAAAAERMSFB/9oACAEDAQE/EFFGl/B1dMj/xAAaEQACAgMAAAAAAAAAAAAAAAAAARFBITGh/9oACAECAQE/EGXNGFmoUjrP/8QAHBABAAMBAQADAAAAAAAAAAAAAQARITFBUYGh/9oACAEBAAE/EGvM+A6uRxxajppmod/Hj8gumyYJRfIxsLZY1pc3mPdZkinoOyjgfeNYivq3P//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;BossImage&quot;
+        title=&quot;BossImage&quot;
+        src=&quot;/static/7f2595992e65c39a39080a7a614c39d2/1c72d/bossillustration.jpg&quot;
+        srcset=&quot;/static/7f2595992e65c39a39080a7a614c39d2/a80bd/bossillustration.jpg 148w,
+/static/7f2595992e65c39a39080a7a614c39d2/1c91a/bossillustration.jpg 295w,
+/static/7f2595992e65c39a39080a7a614c39d2/1c72d/bossillustration.jpg 590w,
+/static/7f2595992e65c39a39080a7a614c39d2/a8a14/bossillustration.jpg 885w,
+/static/7f2595992e65c39a39080a7a614c39d2/fbd2c/bossillustration.jpg 1180w,
+/static/7f2595992e65c39a39080a7a614c39d2/3acf0/bossillustration.jpg 2000w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;금융 IT 개발자 중심으로 16년 근무했고, 강의나 집필, 멘토링 등 다양한 방면에서 활동하고 있습니다. 최신 기술에 대해 꾸준히 공부하고, 논의하는 것에 대해 좋아합니다.&lt;/p&gt;
+&lt;p&gt;박 주형 개발자의 &lt;a href=&quot;https://github.com/joo-pe&quot;&gt;깃허브&lt;/a&gt; 를 방문해보세요!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Matching platform]]></title><description><![CDATA[SMART PLATFORM 기존의 예비 창업가들이 겪어야했던 어려움을 한번에 해소시켜주는, 비용과 시간 을 아끼는 스마트한 플랫폼 DIFFICULTIES…]]></description><link>https://oasisbusiness.github.io/sample-post-2/</link><guid isPermaLink="false">https://oasisbusiness.github.io/sample-post-2/</guid><pubDate>Thu, 14 Jan 2021 07:26:03 GMT</pubDate><content:encoded>&lt;h2&gt;SMART PLATFORM&lt;/h2&gt;
+&lt;p&gt;기존의 예비 창업가들이 겪어야했던 어려움을 한번에 해소시켜주는, &lt;em&gt;비용과 시간&lt;/em&gt; 을 아끼는 스마트한 플랫폼&lt;/p&gt;
+&lt;h3&gt;DIFFICULTIES&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;창업 박람회, 프랜차이즈 설명회 참석 및 부동산 방문으로 인한 시간 소모&lt;/li&gt;
+&lt;li&gt;정보의 결핍&lt;/li&gt;
+&lt;li&gt;진행 도중 생각지도 못한 추가 비용의 발생&lt;/li&gt;
+&lt;li&gt;점포 게약 중 발생하는 비합리적인 권리금&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;나만의 창업 견적서&lt;/h3&gt;
+&lt;p&gt;예비 창업가가 입력한 창업조건과 부합하는 파트너를 알아서 찾아 매칭합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;업종, 지역, 자본금, 희망 매출, 점포 조건 등&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;해당 매칭에 대한 견적서도 함께 전달되어 편리하게 창업 조건을 비교 선택할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5cb6f1151e65dffdf130e5a843ee1f2e/fe9f1/matchingPlatform.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.08108108108109%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACp0lEQVQoz12T3UtTcRjHdxFpagoRktO57bzsBSPfNg035+bmNNnwJTODEl/JigINk9TlzsRVEkVR0UUXgdhFUL7NnbMp6jyKFYnd9ed8e87Zkurix8PDOefzfL+/73M0RrcIe3sSF1olaOvi0DlF6Ool8F4JVkcUuopH0FVGwNVGoa+eRQn1Fuc8PRfBeCSwHpGOdHw0JU4JK2vfMf9qF77eHXTd3kVTbwqsexlM1ThOls5AWxHF5YEFmB3PcKIkBEPVFEzeNQImwDVK/wJLXSLG576i776M6rYNuHq2YO/YAt+4BNY2iSx9GGUNL9DRv4Bq/2tk0QCjLawCjW4Jetd/CvUNIoYepNA2tAnFvtUvgvMmYfF9AWd/iFw2gtNcGEXlj5HPCWrP2KZg9i7D1JRERSAJllQyf1tOJn7g5bt9dN6S0T++j9YBGbznM0w1kyqgwCQgjw2rVen5mimUOpdwY0zGt6NfOH8pCUWYAtYoqpr7ZdR1b+OsPUbBrKPwYpwsrdCHIeQyaWABL2SAArgaAXrnKoIjKXyIHcHil2BwZ4A6VwILH/cw82Qbrms7aL+ZwtW7e6gKxsHaQxmFEeTzc2pVgEabgLKWGLruyLg+KpOjHRhUhWI6lKdvD3EvfIC6K1to6UshMCzT3ayrwDxWgc3gDD9GNaz2jF2AtSmG8sAGKoMbZDlBd5gOR2OgpDqGN9HQnUCxI06T1qGlyntXyfI0TrFRFFlGUFikxTnrKHLYORokwOyLUcKSqkxV9yeUYgrlYP8n3rynMAZTGJzYg59Ush4C1oaQbZgFQ6AuhxMG6wSyjZFjoLKHik02s4uMqpDorYMy6nvS96D8IcqLZt8a7eE0crhZ5Hd+QvPzQ+QFFikkgdZGgImARgXoEVW7jAoU8Rt8gcyh4RmaNwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;matchingPlatform&quot;
+        title=&quot;matchingPlatform&quot;
+        src=&quot;/static/5cb6f1151e65dffdf130e5a843ee1f2e/fcda8/matchingPlatform.png&quot;
+        srcset=&quot;/static/5cb6f1151e65dffdf130e5a843ee1f2e/12f09/matchingPlatform.png 148w,
+/static/5cb6f1151e65dffdf130e5a843ee1f2e/e4a3f/matchingPlatform.png 295w,
+/static/5cb6f1151e65dffdf130e5a843ee1f2e/fcda8/matchingPlatform.png 590w,
+/static/5cb6f1151e65dffdf130e5a843ee1f2e/fe9f1/matchingPlatform.png 883w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Machine Learning, AI]]></title><description><![CDATA[오아시스 비즈니스만의 데이터로 분석해낸 상권 정보를 확인하세요 Our AI Model…]]></description><link>https://oasisbusiness.github.io/code-highlighting-post/</link><guid isPermaLink="false">https://oasisbusiness.github.io/code-highlighting-post/</guid><pubDate>Tue, 12 Jan 2021 07:26:03 GMT</pubDate><content:encoded>&lt;p&gt;오아시스 비즈니스만의 데이터로 분석해낸 상권 정보를 확인하세요&lt;/p&gt;
+&lt;h3&gt;Our AI Model&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;!-- DNN
+wtih TensorFlow (텐서플로) --&amp;gt;
+
+model = tf.keras.Sequential([
+    tf.keras.layers.SimpleRNN(units=4, activation=&amp;#39;tanh&amp;#39;, return_sequences=True, input_shape=[4,1])
+])
+
+model.compile(optimizer=&amp;#39;adam&amp;#39;, loss=&amp;#39;mse&amp;#39;)
+model.summary()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;상권 분석&lt;/h2&gt;
+&lt;p&gt;창업에 필요한 상권 분석 데이터를 바로 보여드립니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt; 상가 정보 • 유동 인구 • 거주 인구 • 업종 정보&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2af024851088e0aff43602f11ef5ec2b/5bf79/MLAI.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAACD0lEQVQoz41T247TMBDN/38KEh+AEAIJwT6waKUV8LCVem/TpL7F97GdhOOW7XJ5YWQlmfGcmePjSSOkO7S6Z5b+21JK148mEsVY181ijCGE+Bz6yw0Xu7rNrditnnNOqcEaW8ZSSjbGSCkRnOcZOVpruN77eZ5+gZGBaK2XknNGaJK2AIAANmLwcHWYvLPIJDANQbvUoBj8rutOp5MQIueslJJSeS6s6HO0XEg9mJxKygVt5DDkcRynkXJpkA3Ydrvd7XbH4zGlCj6fzxn1yVEmd+7906Nqt4fNGqclziNj0TlytoI556vVCkjG2FUSY70D1+B8jFZ0lm/wNtpgS/c8cJmtJaUqbbBdLpdo3rYtVHPOG6iVS76YFGLQemDCe0fRvrorD+sylRBTruBhGMAc/SFj7Yye3hkzHLvOeXvkbvHlqXBmA6Hease40G17glJVbegMZN/3UqlYkUFC3kDO+0Txw+Z+8fF+fvuGJsg0nk5H8Njs2/V6U8Fo2F3szFjwThh6ePeD9i0udhznvns0bJ32Cw99SxacoY1SAnwrGAer05AzpTzP+f038enzynz/an0cxzIM0I5QaJomSuStHipBbI3NbQbrk2JJZScPbPW6LO6MjTknKThGog5bKVfMhdH4An4ZbIoppmCUC7goj1Wlfzb/pzX//jTAUypgSOm3uX8efqiLKcKBofZPncxYH42l/8sAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;MLAI&quot;
+        title=&quot;MLAI&quot;
+        src=&quot;/static/2af024851088e0aff43602f11ef5ec2b/fcda8/MLAI.png&quot;
+        srcset=&quot;/static/2af024851088e0aff43602f11ef5ec2b/12f09/MLAI.png 148w,
+/static/2af024851088e0aff43602f11ef5ec2b/e4a3f/MLAI.png 295w,
+/static/2af024851088e0aff43602f11ef5ec2b/fcda8/MLAI.png 590w,
+/static/2af024851088e0aff43602f11ef5ec2b/efc66/MLAI.png 885w,
+/static/2af024851088e0aff43602f11ef5ec2b/5bf79/MLAI.png 966w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;지도에서 원하는 건물을 선택하기만 하면 그곳의 상권 정보를 알려드립니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1. 상가 정보
+    - 주차장 개수
+    - 정류장
+    - 도로까지의 거리
+
+2. 유동 인구 
+    - 요일 별 유동인구
+    - 시간대별 유동인구
+    - 연령별 분포도
+
+3. 거주 인구 
+    - 거주/직장 인구의 비율
+    - 연령병 인 분포
+
+4. 업종 
+    - 업종 별 전년대비 개수&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Front-end]]></title><description><![CDATA[WITH REACT Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within…]]></description><link>https://oasisbusiness.github.io/sample-post-1/</link><guid isPermaLink="false">https://oasisbusiness.github.io/sample-post-1/</guid><pubDate>Sun, 10 Jan 2021 07:26:03 GMT</pubDate><content:encoded>&lt;h2&gt;WITH REACT&lt;/h2&gt;
+&lt;p&gt;Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.&lt;/p&gt;
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+&lt;h3&gt;Body text&lt;/h3&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. &lt;strong&gt;This is strong&lt;/strong&gt;. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1440635592348-167b1b30296f?crop=entropy&amp;#x26;dpr=2&amp;#x26;fit=crop&amp;#x26;fm=jpg&amp;#x26;h=475&amp;#x26;ixjsv=2.1.0&amp;#x26;ixlib=rb-0.3.5&amp;#x26;q=50&amp;#x26;w=1250&quot; alt=&quot;Smithsonian Image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This is emphasized&lt;/em&gt;. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H2O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times (That’s a citation). Underline.Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.&lt;/p&gt;
+&lt;p&gt;HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.&lt;/p&gt;
+&lt;h3&gt;Blockquotes&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Tables&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;Header 1&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;Header 2&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;Header 3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;cell 1&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;cell 2&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;cell 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;cell 4&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;cell 5&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;cell 6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;List Types&lt;/h2&gt;
+&lt;h3&gt;Ordered Lists&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Item one&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;sub item one&lt;/li&gt;
+&lt;li&gt;sub item two&lt;/li&gt;
+&lt;li&gt;sub item three&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Item two&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Unordered Lists&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Item one&lt;/li&gt;
+&lt;li&gt;Item two&lt;/li&gt;
+&lt;li&gt;Item three&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Back-end]]></title><description><![CDATA[Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue…]]></description><link>https://oasisbusiness.github.io/readability-post/</link><guid isPermaLink="false">https://oasisbusiness.github.io/readability-post/</guid><pubDate>Thu, 07 Jan 2021 07:26:03 GMT</pubDate><content:encoded>&lt;p&gt;Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.&lt;/p&gt;
+&lt;p&gt;Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.&lt;/p&gt;
+&lt;h2&gt;Cupidatat 90’s lo-fi authentic try-hard&lt;/h2&gt;
+&lt;p&gt;In pug Portland incididunt mlkshk put a bird on it vinyl quinoa. Terry Richardson shabby chic +1, scenester Tonx excepteur tempor fugiat voluptate fingerstache aliquip nisi next level. Farm-to-table hashtag Truffaut, Odd Future ex meggings gentrify single-origin coffee try-hard 90’s.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sartorial hoodie&lt;/li&gt;
+&lt;li&gt;Labore viral forage&lt;/li&gt;
+&lt;li&gt;Tote bag selvage&lt;/li&gt;
+&lt;li&gt;DIY exercitation et id ugh tumblr church-key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Incididunt umami sriracha, ethical fugiat VHS ex assumenda yr irure direct trade. Marfa Truffaut bicycle rights, kitsch placeat Etsy kogi asymmetrical. Beard locavore flexitarian, kitsch photo booth hoodie plaid ethical readymade leggings yr.&lt;/p&gt;
+&lt;p&gt;Aesthetic odio dolore, meggings disrupt qui readymade stumptown brunch Terry Richardson pour-over gluten-free. Banksy american apparel in selfies, biodiesel flexitarian organic meh wolf quinoa gentrify banjo kogi. Readymade tofu ex, scenester dolor umami fingerstache occaecat fashion axe Carles jean shorts minim. Keffiyeh fashion axe nisi Godard mlkshk dolore. Lomo you probably haven’t heard of them eu non, Odd Future Truffaut pug keytar meggings McSweeney’s Pinterest cred. Etsy literally aute esse, eu bicycle rights qui meggings fanny pack. Gentrify leggings pug flannel duis.&lt;/p&gt;
+&lt;h2&gt;Forage occaecat cardigan qui&lt;/h2&gt;
+&lt;p&gt;Fashion axe hella gastropub lo-fi kogi 90’s aliquip +1 veniam delectus tousled. Cred sriracha locavore gastropub kale chips, iPhone mollit sartorial. Anim dolore 8-bit, pork belly dolor photo booth aute flannel small batch. Dolor disrupt ennui, tattooed whatever salvia Banksy sartorial roof party selfies raw denim sint meh pour-over. Ennui eu cardigan sint, gentrify iPhone cornhole.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Whatever velit occaecat quis deserunt gastropub, leggings elit tousled roof party 3 wolf moon kogi pug blue bottle ea. Fashion axe shabby chic Austin quinoa pickled laborum bitters next level, disrupt deep v accusamus non fingerstache.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Tote bag asymmetrical elit sunt. Occaecat authentic Marfa, hella McSweeney’s next level irure veniam master cleanse. Sed hoodie letterpress artisan wolf leggings, 3 wolf moon commodo ullamco. Anim occupy ea labore Terry Richardson. Tofu ex master cleanse in whatever pitchfork banh mi, occupy fugiat fanny pack Austin authentic. Magna fugiat 3 wolf moon, labore McSweeney’s sustainable vero consectetur. Gluten-free disrupt enim, aesthetic fugiat jean shorts trust fund keffiyeh magna try-hard.&lt;/p&gt;
+&lt;h2&gt;Hoodie Duis&lt;/h2&gt;
+&lt;p&gt;Actually salvia consectetur, hoodie duis lomo YOLO sunt sriracha. Aute pop-up brunch farm-to-table odio, salvia irure occaecat. Sriracha small batch literally skateboard. Echo Park nihil hoodie, aliquip forage artisan laboris. Trust fund reprehenderit nulla locavore. Stumptown raw denim kitsch, keffiyeh nulla twee dreamcatcher fanny pack ullamco 90’s pop-up est culpa farm-to-table. Selfies 8-bit do pug odio.&lt;/p&gt;
+&lt;h3&gt;Thundercats Ho!&lt;/h3&gt;
+&lt;p&gt;Fingerstache thundercats Williamsburg, deep v scenester Banksy ennui vinyl selfies mollit biodiesel duis odio pop-up. Banksy 3 wolf moon try-hard, sapiente enim stumptown deep v ad letterpress. Squid beard brunch, exercitation raw denim yr sint direct trade. Raw denim narwhal id, flannel DIY McSweeney’s seitan. Letterpress artisan bespoke accusamus, meggings laboris consequat Truffaut qui in seitan. Sustainable cornhole Schlitz, twee Cosby sweater banh mi deep v forage letterpress flannel whatever keffiyeh. Sartorial cred irure, semiotics ethical sed blue bottle nihil letterpress.&lt;/p&gt;
+&lt;p&gt;Occupy et selvage squid, pug brunch blog nesciunt hashtag mumblecore skateboard yr kogi. Ugh small batch swag four loko. Fap post-ironic qui tote bag farm-to-table american apparel scenester keffiyeh vero, swag non pour-over gentrify authentic pitchfork. Schlitz scenester lo-fi voluptate, tote bag irony bicycle rights pariatur vero Vice freegan wayfarers exercitation nisi shoreditch. Chambray tofu vero sed. Street art swag literally leggings, Cosby sweater mixtape PBR lomo Banksy non in pitchfork ennui McSweeney’s selfies. Odd Future Banksy non authentic.&lt;/p&gt;
+&lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;</content:encoded></item></channel></rss>

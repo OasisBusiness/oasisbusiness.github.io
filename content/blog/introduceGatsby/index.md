@@ -5,7 +5,7 @@ writeAuthor: semin
 description: "project with SpringBoot"
 categories: [paragraph, feature photo]
 comments: true
-image:
+image: "../../assets/semin.png"
 feature: https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250
 credit: Greg Rakozy
 creditlink: https://unsplash.com/photos/oMpAz-DN-9I
@@ -237,5 +237,15 @@ title: "타이틀 정보"
 _이제 모든 블로그 작성 준비가 끝났습니다._
 
 이렇게 알아본 방법으로 여러분도 gatsby를 이용해 자신만의 독창적인 블로그를 만들 수 있습니다!
+
+#
+
+
+#
+#
+
+---
+
+>참조 사이트: 박성룡, "gatsby", https://pks2974.medium.com/gatsby-%EB%A1%9C-blog-%EB%A7%8C%EB%93%A4%EA%B8%B0-ac3eed48e068, (2021.01.27)
 
 #

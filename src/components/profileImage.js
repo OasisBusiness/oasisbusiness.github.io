@@ -12,6 +12,7 @@ import seminAvatar from "../assets/semin.png"
 import userAvatar from "../assets/user.png"
 
 
+
 const ProfileImage = () => {
 
     const data = useStaticQuery(graphql`

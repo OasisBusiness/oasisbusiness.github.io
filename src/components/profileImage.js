@@ -8,8 +8,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import seminAvatar from "../assets/semin.png"
-import userAvatar from "../assets/user.png"
 
 
 
@@ -42,8 +40,6 @@ const ProfileImage = () => {
                 }
         }
       `)
-
-  const { author } = data.markdownRemark.frontmatter.writeAuthor
 
   return (
     <div style={{

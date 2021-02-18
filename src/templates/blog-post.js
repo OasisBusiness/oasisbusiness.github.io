@@ -6,13 +6,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import ProfileImage from "../components/profileImage"
-import Image from "gatsby-image"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   // const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
 
   return (
     <Layout location={location} title="Home">
@@ -46,7 +44,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </div>
           </p>
         </header>
-        <Image fluid={featuredImgFluid} alt='testImg'/>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -106,13 +103,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         writeAuthor
-        featuredImage {
-            childImageSharp {
-                fluid(maxWidth: 800) {
-                ...GatsbyImageSharpFluid
-                }
-            }
-        }
       }
     }
   }

@@ -58,7 +58,9 @@ const Bio = () => {
       />
       <p
         style={{
-        marginTop: '8px',}}>
+          marginTop: "8px",
+        }}
+      >
         Written by <strong>{author.name}</strong> {author.summary}
         {` `}
         <a href={`https://${social.twitter}.co.kr`}>

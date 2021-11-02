@@ -1,12 +1,12 @@
 # OASIS BUSINESS BLOG
+
 ## tech & news
 
-**[oasisbusiness](https://oasisbusiness.co.kr/)**  blog
+**[oasisbusiness](https://oasisbusiness.co.kr/)** blog
 
 ### Preview
 
 ![theme-preview](./content/assets/theme-preview.png)
-
 
 ## Quick setup
 

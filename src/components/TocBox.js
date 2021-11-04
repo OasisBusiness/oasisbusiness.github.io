@@ -48,13 +48,13 @@ function TocBox({ html }) {
       <div
         id="toc-container"
         css={css`
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 1100px) {
             display: none;
           }
           z-index: 100;
           position: fixed;
           top: 240px;
-          right: 3%;
+          left: calc(48% + 768px / 2);
           width: 240px;
           max-width: 240px;
           background: rgba(255, 255, 255, 0.2);

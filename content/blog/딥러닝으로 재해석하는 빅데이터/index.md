@@ -3,7 +3,7 @@ title: "딥러닝으로 재해석하는 빅데이터"
 date: "2021-02-22T07:26:03.284Z"
 description: "Our own AI Model, made with machine learning"
 categories: [AI, DeepLearning]
-writeAuthor: "박태현"
+writeAuthor: "양세민"
 ---
 
 # 딥러닝으로 재해석하는 빅데이터

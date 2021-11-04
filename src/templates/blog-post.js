@@ -94,10 +94,10 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                   marginBottom: "0.8rem",
                 }}
               >
-                <div className="flex items-center">
-                  <small style={{ textAlign: `center` }}>
+                <div className="flex items-center text-md mt-1">
+                  <span style={{ textAlign: `center` }}>
                     {post.frontmatter.date}{" "}
-                  </small>{" "}
+                  </span>{" "}
                 </div>
                 <a
                   style={{ boxShadow: "none" }}

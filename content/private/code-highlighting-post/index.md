@@ -3,6 +3,7 @@ title: "Machine Learning, AI"
 date: "2021-01-12T07:26:03.284Z"
 description: "Our own AI Model, made with machine learning"
 categories: [code]
+writeAuthor: "semin"
 comments: true
 ---
 
@@ -25,7 +26,8 @@ model.summary()
 ## 상권 분석
 
 창업에 필요한 상권 분석 데이터를 바로 보여드립니다.
->  상가 정보 • 유동 인구 • 거주 인구 • 업종 정보
+
+> 상가 정보 • 유동 인구 • 거주 인구 • 업종 정보
 
 ![MLAI](MLAI.png)
 
@@ -36,14 +38,14 @@ model.summary()
         - 정류장
         - 도로까지의 거리
 
-    2. 유동 인구 
+    2. 유동 인구
         - 요일 별 유동인구
         - 시간대별 유동인구
         - 연령별 분포도
 
-    3. 거주 인구 
+    3. 거주 인구
         - 거주/직장 인구의 비율
         - 연령병 인 분포
 
-    4. 업종 
+    4. 업종
         - 업종 별 전년대비 개수

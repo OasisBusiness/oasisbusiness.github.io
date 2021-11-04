@@ -4,22 +4,13 @@ date: "2021-01-20T07:26:03.284Z"
 writeAuthor: semin
 profile: "/semin.png"
 description: "project with SpringBoot"
-categories: [paragraph, feature photo]
-comments: true
-image:
-feature: https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250
-credit: Greg Rakozy
-creditlink: https://unsplash.com/photos/oMpAz-DN-9I
-featuredImage: ../assets/avatars/user.png
+categories: [java, springboot]
 ---
 
 ###Gradle
-IntelliJ를 시작하고 gradle로 프로젝트를 생성하고 SpringBoot로 프로젝트 개발 환경을 바꿔주고..
-
-이것저것 개발 환경을 바꿀 때 마다 이게 뭐길래 이걸로 하는걸까?싶었고
-
+IntelliJ를 시작하고 gradle로 프로젝트를 생성하고 SpringBoot로 프로젝트 개발 환경을 바꿔주고..  
+이것저것 개발 환경을 바꿀 때 마다 이게 뭐길래 이걸로 하는걸까? 싶었고  
 그 첫 번째 관문에서 마주친 것이 바로 gradle.
-
 
 ## 멀티 모듈
 
@@ -35,11 +26,14 @@ IntelliJ를 시작하고 gradle로 프로젝트를 생성하고 SpringBoot로 �
 
 즉, 공통 프로젝트를 **모듈**화하여 프로젝트 안에 갖고 있는 구조입니다.
 
-***
+---
+
 이 때 개발을 하고, 빌드를 할 때 만족해야하는 조건이 있습니다.
+
 - 개발시에는 즉각적으로 공통 프로젝트 코드 사용이 용이
 - 빌드시에는 자동으로 공통 프로젝트를 포함하여 빌드 진행
-***
+
+---
 
 #
 
@@ -47,16 +41,18 @@ IntelliJ를 시작하고 gradle로 프로젝트를 생성하고 SpringBoot로 �
 
 ###구조
 ![projServe](projServe.png)
+
 - 프로젝트 구조 예시
-    - 사용자와 접하는 서버: WEB 프로젝트
-    - DB와 접하는 서버: API 프로젝트
-    - 공통으로 사용할 프로젝트: COMMON 프로젝트
+  - 사용자와 접하는 서버: WEB 프로젝트
+  - DB와 접하는 서버: API 프로젝트
+  - 공통으로 사용할 프로젝트: COMMON 프로젝트
 
 #
 
 root 프로젝트 하위에 각 프로젝트(모듈)를 생성합니다.
-> **multi-modules** / module-api, module-web, module-common
->> module-common: 공통 프로젝트
+
+> **multi-modules** / module-api, module-web, module-common  
+> module-common: 공통 프로젝트
 
 이 때 root 프로젝트를 기준으로 빌드가 이루어지기 때문에 하위 프로젝트에는
 gradle폴더나 redlew등의 파일이 없고 build.gradle과 src폴더만 존재한다는 점을 인지합니다.
@@ -69,6 +65,7 @@ gradle폴더나 redlew등의 파일이 없고 build.gradle과 src폴더만 존�
 공통으로 사용 될 파일들을 생성합니다.
 
 **module-common/java/com/code/domain/Member.java**
+
 ```
 @Entity
 public class Member {
@@ -103,16 +100,20 @@ public class Member {
     }
 }
 ```
+
 #
 
 **module-common/java/com/code/repository/MemberRepository.java**
+
 ```
 public interface MemberRepository extends JpaRepository<Member, Long> {
 }
 ```
+
 #
 
 **module-common/build.gradle**
+
 ```
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
@@ -120,15 +121,18 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 ```
+
 작성한 Entity 클래스와 해당 Entity 의 repository, repository test를 위한 최소한의 의존성 추가
 
 #
 
 ---
+
 ###module-api
 module-common의 클래스들을 사용
 
 **module-api/java/MemberServiceCustom.java**
+
 ```
 @Service
 public class MemberServiceCustom {
@@ -144,17 +148,20 @@ public class MemberServiceCustom {
     }
 }
 ```
+
 MemberRepository의 bean injection 사용
 
 #
 
 **module-api/build.gradle**
+
 ```
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 ```
+
 의존성 추가
 
 #
@@ -167,18 +174,19 @@ dependencies {
 #
 
 **multi-modules/settings.gradle**
+
 ```
 rootProject.name = 'multi-modules'
 
 include 'module-common', 'module-api', 'module-web'
 ```
+
 multi-modules가 module-common, module-api-module-web을 관리한다는 정의
 
 #
 
-
-
 **multi-modules/gradle.build**
+
 ```
 buildscript {
     ext {
@@ -224,6 +232,7 @@ project(':module-web') {
     }
 }
 ```
+
 subprojects와 project()
 
 #
@@ -236,6 +245,7 @@ settings.gradle에서 정의해둔 하위 프로젝트들을 관리합니다.
 _root 프로젝트의 의존성까지 관리하고자 하면 allprojects로 관리합니다._
 
 ###project
+
 ```
 project(':하위 프로젝트 명') {
   dependencies {
@@ -243,8 +253,8 @@ project(':하위 프로젝트 명') {
     }
   }
 ```
-_: 디렉토리 path 표시_
 
+_: 디렉토리 path 표시_
 
 ###👉🏻멀티 모듈 구조 완성!
 
@@ -253,14 +263,17 @@ _: 디렉토리 path 표시_
 [^2]: 멀티 모듈 빌드
 
 위에서 얘기했던 멀티 모듈 빌드시 만족 조건을 기억하시나요?
->빌드시에는 자동으로 공통 프로젝트를 포함하여 빌드 진행
+
+> 빌드시에는 자동으로 공통 프로젝트를 포함하여 빌드 진행
 
 하지만 코드를 살펴보면 module-common에는 main메소드가 없기 때문에 프로젝트 빌드에 실패하게됩니다.
+
 > 단순한 참조용 클래스: jar형태로 만들 수 없음
 
 ###gradle에서 제공하는 bootRepackage.enabled
 
 **module-common/build.gradle에 추가**
+
 ```
 bootRepackage {
     enabled = false
@@ -270,12 +283,11 @@ bootRepackage {
 #
 
 **스프링 부트 2.0 이상**
+
 ```
 bootJar { enabled = false }
 jar { enabled = true }
 ```
-
-
 
 #
 
@@ -285,6 +297,7 @@ jar { enabled = true }
 감사합니다.
 
 #
+
 #
 
 ---

@@ -1,10 +1,9 @@
-// Gatsby supports TypeScript natively!
 import React from "react"
 import { PageProps, Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 import ProfileImage from "../components/profileImage"
+import { getUserInfo } from "../data/user"
 
 type PageContext = {
   currentPage: number
@@ -34,11 +33,7 @@ type Data = {
   }
 }
 
-const BlogIndex = ({
-  data,
-  location,
-  pageContext,
-}: PageProps<Data, PageContext>) => {
+const BlogIndex = ({ data, pageContext }: PageProps<Data, PageContext>) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
   const { currentPage, numPages } = pageContext
@@ -49,34 +44,35 @@ const BlogIndex = ({
   const nextPage = `/${currentPage + 1}`
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="Tech Blog" />
+    <Layout sidebar>
+      <SEO title={siteTitle} />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
+        const user = getUserInfo(node.frontmatter.writeAuthor)
         return (
-          <article key={node.fields.slug}>
+          <article key={node.fields.slug} style={{ maxWidth: "768px" }}>
             <header>
               <h3
                 style={{
-                  marginBottom: rhythm(1 / 4),
-                  fontSize: '2rem',
+                  marginBottom: "4px",
                 }}
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
-              <div
-                      style={{
-                        display: `flex`,
-                        alignItems: `center`,
-                      }}
-                    >
-              <small>{node.frontmatter.date} || </small><ProfileImage /> <small>{node.frontmatter.writeAuthor}</small>
-            </div>
+              <div className="flex items-center">
+                <small>{node.frontmatter.date}</small>
+              </div>
+              <span className="text-sm flex items-center mt-1 mb-2">
+                <ProfileImage size={24} src={user.avatar} />{" "}
+                <span className="ml-1 text-gray-500">by</span>
+                <span className="ml-1 font-semi-bold">{user.nickname}</span>
+              </span>
             </header>
             <section>
               <p
+                className="text-sm"
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}
@@ -137,7 +133,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMM DD, YYYY")
             title
             description
             writeAuthor

@@ -15,7 +15,7 @@ function TocBox({ html }) {
           e.preventDefault()
           const id = e.target.href.split("#")[1]
           const target = document.getElementById(`${decodeURI(id)}`)
-          window.scrollTo(0, target.offsetTop - HEADER_HEIGHT - 20)
+          target && window.scrollTo(0, target.offsetTop - HEADER_HEIGHT - 20)
         })
     )
 
@@ -84,32 +84,36 @@ function TocBox({ html }) {
             font-weight: 500;
             transform: translateX(-2px) scale(1.05);
           }
-
-          /* h1 */
-          & > ul > li > p > a {
-            font-weight: 500;
-            font-size: 13px;
-          }
-          /* h2 */
-          & > ul > li > ul > li > p > a,
-          & > ul > li > ul > li > a {
-            font-size: 12px;
-            font-weight: 500;
-            cursor: pointer;
-          }
-          /* h3 */
-          & > ul > li > ul > li > ul > li a {
-            font-size: 12px;
-            max-width: calc(100%);
-          }
-          /* h4 */
-          & > ul > li > ul > li > ul > li > ul > li {
-            background-color: green;
-            display: none;
-          }
         `}
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      >
+        <div
+          css={css`
+            /* h1 */
+            & > ul > li > p > a {
+              font-weight: 500;
+              font-size: 13px;
+            }
+            /* h2 */
+            & > ul > li > ul > li > p > a,
+            & > ul > li > ul > li > a {
+              font-size: 12px;
+              font-weight: 500;
+              cursor: pointer;
+            }
+            /* h3 */
+            & > ul > li > ul > li > ul > li a {
+              font-size: 12px;
+              max-width: calc(100%);
+            }
+            /* h4 */
+            & > ul > li > ul > li > ul > li > ul > li {
+              background-color: green;
+              display: none;
+            }
+          `}
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      </div>
     </>
   )
 }

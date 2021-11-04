@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ProfileImage from "../components/profileImage"
 import { getUserInfo } from "../data/user"
-import { css } from "@emotion/react"
 
 type PageContext = {
   currentPage: number

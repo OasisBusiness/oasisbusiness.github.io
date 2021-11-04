@@ -221,4 +221,4 @@ _이제 모든 블로그 작성 준비가 끝났습니다._
 
 ---
 
-######참조 사이트: 박성룡, "gatsby", https://pks2974.medium.com/gatsby-%EB%A1%9C-blog-%EB%A7%8C%EB%93%A4%EA%B8%B0-ac3eed48e068, (2021.01.27)
+######, [참조 사이트: 박성룡, "gatsby"](https://pks2974.medium.com/gatsby-%EB%A1%9C-blog-%EB%A7%8C%EB%93%A4%EA%B8%B0-ac3eed48e068)

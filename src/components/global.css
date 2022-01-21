@@ -142,3 +142,8 @@ button {
 img[src="bossillustration.jpg"] {
   float: left;
 }
+
+ol,
+ul {
+  margin-left: 1.2rem;
+}

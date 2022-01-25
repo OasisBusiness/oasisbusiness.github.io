@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[오아시스 비즈니스 기술 블로그]]></title><description><![CDATA[오아시스 비즈니스 기술 블로그]]></description><link>https://oasisbusiness.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 25 Jan 2022 05:19:01 GMT</lastBuildDate><item><title><![CDATA[코드 리뷰]]></title><description><![CDATA[1. 목적 유지보수성 향상 개발자 실력 향상 서비스 구현 관점 통일 서비스 코드 품질 향상 2. 규칙 SNS 리뷰 적듯이 리뷰 코멘트 저자가 더 친절히 적는다. description test 방법 commit…]]></description><link>https://oasisbusiness.github.io/코드리뷰/</link><guid isPermaLink="false">https://oasisbusiness.github.io/코드리뷰/</guid><pubDate>Wed, 19 Jan 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-목적&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%AA%A9%EC%A0%81&quot; aria-label=&quot;1 목적 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 목적&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;유지보수성 향상&lt;/li&gt;
+&lt;li&gt;개발자 실력 향상&lt;/li&gt;
+&lt;li&gt;서비스 구현 관점 통일&lt;/li&gt;
+&lt;li&gt;서비스 코드 품질 향상&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;2-규칙&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EA%B7%9C%EC%B9%99&quot; aria-label=&quot;2 규칙 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 규칙&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;SNS 리뷰 적듯이 리뷰 코멘트&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;저자가 더 친절히 적는다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;description&lt;/li&gt;
+&lt;li&gt;test 방법&lt;/li&gt;
+&lt;li&gt;commit 내용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;레퍼런스에 근거한 리뷰 환영&lt;/li&gt;
+&lt;li&gt;한번에 리뷰가 가능할 분량의 PR.&lt;/li&gt;
+&lt;li&gt;배려를 생각한 코멘트&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;3-우선순위&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84&quot; aria-label=&quot;3 우선순위 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 우선순위&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;P1: 꼭 반영해주세요 (Request changes)&lt;/strong&gt;&lt;br&gt;
+리뷰어는 PR의 내용이 서비스에 중대한 오류를 발생할 수 있는 가능성을 잠재하고 있는 등 중대한 코드 수정이 반드시 필요하다고 판단되는 경우, P1 태그를 통해 리뷰 요청자에게 수정을 요청합니다. 리뷰 요청자는 p1 태그에 대해 리뷰어의 요청을 반영하거나, 반영할 수 없는 합리적인 의견을 통해 리뷰어를 설득할 수 있어야 합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;P2: 적극적으로 고려해주세요 (Request changes)&lt;/strong&gt;&lt;br&gt;
+작성자는 P2에 대해 수용하거나 만약 수용할 수 없는 상황이라면 적합한 의견을 들어 토론할 것을 권장합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;P3: 웬만하면 반영해 주세요 (Comment)&lt;/strong&gt;&lt;br&gt;
+작성자는 P3에 대해 수용하거나 만약 수용할 수 없는 상황이라면 반영할 수 없는 이유를 들어 설명하거나 다음에 반영할 계획을 명시적으로(JIRA 티켓 등으로) 표현할 것을 권장합니다. Request changes 가 아닌 Comment 와 함께 사용됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;P4: 반영해도 좋고 넘어가도 좋습니다 (Approve)&lt;/strong&gt;&lt;br&gt;
+작성자는 P4에 대해서는 아무런 의견을 달지 않고 무시해도 괜찮습니다. 해당 의견을 반영하는 게 좋을지 고민해 보는 정도면 충분합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;P5: 그냥 사소한 의견입니다 (Approve)&lt;/strong&gt;&lt;br&gt;
+작성자는 P5에 대해 아무런 의견을 달지 않고 무시해도 괜찮습니다.&lt;/p&gt;
+&lt;h2 id=&quot;4-commit-메시지-접두어&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-commit-%EB%A9%94%EC%8B%9C%EC%A7%80-%EC%A0%91%EB%91%90%EC%96%B4&quot; aria-label=&quot;4 commit 메시지 접두어 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. commit 메시지 접두어&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;feat&lt;/code&gt; (feature)&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;fix&lt;/code&gt; (bug fix)&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;docs&lt;/code&gt; (documentation)&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;style&lt;/code&gt; (formatting, missing semi colons, …)&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;refact&lt;/code&gt; (refactoring)&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt; (when adding missing tests)&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[마크다운 사용법과 글 작성시 꿀팁 모음]]></title><description><![CDATA[마크다운 사용법  제목 Heading2  부제목 볼드  bold 이탤릭  이탤릭 취소선  취소선 밑줄 html…]]></description><link>https://oasisbusiness.github.io/마크다운작성법/</link><guid isPermaLink="false">https://oasisbusiness.github.io/마크다운작성법/</guid><pubDate>Mon, 15 Nov 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;마크다운-사용법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EC%82%AC%EC%9A%A9%EB%B2%95&quot; aria-label=&quot;마크다운 사용법 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;마크다운 사용법&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;# 마크다운 사용법&lt;/code&gt;&lt;br&gt;
+제목&lt;/p&gt;
+&lt;h2 id=&quot;heading2&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#heading2&quot; aria-label=&quot;heading2 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Heading2&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;## Heading2&lt;/code&gt;&lt;br&gt;
+부제목&lt;/p&gt;
+&lt;h3 id=&quot;볼드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B3%BC%EB%93%9C&quot; aria-label=&quot;볼드 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;볼드&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;**bold**&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;bold&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;이탤릭&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%B4%ED%83%A4%EB%A6%AD&quot; aria-label=&quot;이탤릭 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;이탤릭&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;_이탤릭_&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;이탤릭&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&quot;취소선&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B7%A8%EC%86%8C%EC%84%A0&quot; aria-label=&quot;취소선 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;취소선&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;~~취소선~~&lt;/code&gt;&lt;br&gt;
+&lt;del&gt;취소선&lt;/del&gt;&lt;/p&gt;
+&lt;h3 id=&quot;밑줄&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B0%91%EC%A4%84&quot; aria-label=&quot;밑줄 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;밑줄&lt;/h3&gt;
+&lt;p&gt;html 태그 사용&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;u&gt;밑줄친 문장&amp;lt;/u&gt;&lt;/code&gt;&lt;br&gt;
+&lt;u&gt;밑줄친 문장&lt;/u&gt;&lt;/p&gt;
+&lt;h3 id=&quot;인용&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%B8%EC%9A%A9&quot; aria-label=&quot;인용 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;인용&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;&gt; 인용문은 이렇게 나옵니다.&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;인용문은 이렇게 나옵니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;리스트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A6%AC%EC%8A%A4%ED%8A%B8&quot; aria-label=&quot;리스트 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;리스트&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;- 리스트&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;리스트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;1. 순서&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;하이&lt;/li&gt;
+&lt;li&gt;안녕&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;구분선&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%AC%EB%B6%84%EC%84%A0&quot; aria-label=&quot;구분선 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;구분선&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;---&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;링크&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A7%81%ED%81%AC&quot; aria-label=&quot;링크 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;링크&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;기본 사용법
+&lt;code class=&quot;language-text&quot;&gt;[구글](http://google.com)&lt;/code&gt;&lt;br&gt;
+&lt;a href=&quot;http://google.com&quot;&gt;구글&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;새창으로 열기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;이미지&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%B4%EB%AF%B8%EC%A7%80&quot; aria-label=&quot;이미지 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;이미지&lt;/h2&gt;
+&lt;p&gt;주소나 상대 경로를 입력합니다.
+&lt;code class=&quot;language-text&quot;&gt;![이미지](code.png)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d81cac51f0d74a3c06c0020f9f347f1e/ae28e/code.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 41.891891891891895%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcElEQVQoz5WRPU/CUBSG+0cMH/IpFEpLC71FKLRSMHyVzVFWcIHB0U0E44IaTEQSo4kuDs7+uNdz22iUEBOHJ+e2t/fpOe8Vnt8/MF8+4nyxwvSaoPq9/geX5OAu4Wr1AltnMBoKdmQVkQwhaQhnNexmVYRE5U/CGQXBtIyYXMRi/QphdrNGWishX2LIlWyo1SaUioWUbiHNLO/DuKIj9oP4BtFcAXvkmN+uIUwX90jkDexSV5lCGbLZglhuQ2IORBJGJHUD7deayzhJ1cAFje4JkyT0NuQCipUuKmYHRq0Nyz1Ctd1H3nKhWF2wRg/ZEnXPbPqZjYxhIqGyLUJ64KPxTtlBC4bZJOpgTgea3aMYWmB1LuzDOHShOy7YvoNa1YHOTEiaQRNVvAulDB/8S6BwoyQNUQ1QyEGRh51DIJXzqo/k15RfA0RI9C+FdznjGS6f3jA6PcNgNMHxcOwxGE6Ir8rfb8ffG3tnT8hxR65P9Asz9+mYoKkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;이미지&quot;
+        title=&quot;이미지&quot;
+        src=&quot;/static/d81cac51f0d74a3c06c0020f9f347f1e/fcda8/code.png&quot;
+        srcset=&quot;/static/d81cac51f0d74a3c06c0020f9f347f1e/12f09/code.png 148w,
+/static/d81cac51f0d74a3c06c0020f9f347f1e/e4a3f/code.png 295w,
+/static/d81cac51f0d74a3c06c0020f9f347f1e/fcda8/code.png 590w,
+/static/d81cac51f0d74a3c06c0020f9f347f1e/efc66/code.png 885w,
+/static/d81cac51f0d74a3c06c0020f9f347f1e/c83ae/code.png 1180w,
+/static/d81cac51f0d74a3c06c0020f9f347f1e/ae28e/code.png 1598w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;태깅&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%83%9C%EA%B9%85&quot; aria-label=&quot;태깅 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;태깅&lt;/h3&gt;
+&lt;p&gt;백틱(`)으로 감싸서 사용&lt;/p&gt;
+&lt;p&gt;`텍스트`&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;텍스트&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;코드블럭&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BD%94%EB%93%9C%EB%B8%94%EB%9F%AD&quot; aria-label=&quot;코드블럭 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;코드블럭&lt;/h3&gt;
+&lt;p&gt;백틱(`) &lt;strong&gt;세번!&lt;/strong&gt; 으로 감싸서 사용&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;```
+// 주석
+console.log(&quot;hello world&quot;)
+console.log(&quot;hello world again&quot;)
+```&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 주석&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;hello world&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;hello world again&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;개행&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%ED%96%89&quot; aria-label=&quot;개행 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개행&lt;/h3&gt;
+&lt;p&gt;문장 뒤 공백문자 두번&lt;/p&gt;
+&lt;h1 id=&quot;글-작성시-유용한-팁-모음&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B8%80-%EC%9E%91%EC%84%B1%EC%8B%9C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%ED%8C%81-%EB%AA%A8%EC%9D%8C&quot; aria-label=&quot;글 작성시 유용한 팁 모음 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;글 작성시 유용한 팁 모음&lt;/h1&gt;
+&lt;h3 id=&quot;추천-마크다운-에디터&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B6%94%EC%B2%9C-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EC%97%90%EB%94%94%ED%84%B0&quot; aria-label=&quot;추천 마크다운 에디터 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;추천 마크다운 에디터&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;https://typora.io/&lt;/code&gt; &lt;a href=&quot;https://typora.io/&quot;&gt;다운로드 링크&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;실시간 변환 및 에디터 도구 제공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;1-개발관련-로고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EA%B0%9C%EB%B0%9C%EA%B4%80%EB%A0%A8-%EB%A1%9C%EA%B3%A0&quot; aria-label=&quot;1 개발관련 로고 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 개발관련 로고&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;![react](https://cdn.svgporn.com/logos/여기.svg)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;“여기” 부분에 원하는 로고명칭 검색&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.svgporn.com/logos/react.svg&quot; alt=&quot;react&quot;&gt;&lt;/p&gt;
+&lt;h4&gt;사이즈 조절&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;zoom부분 퍼센트 지정&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;img src=&quot;https://cdn.svgporn.com/logos/python.svg&quot; alt=&quot;react&quot; style=&quot;zoom:20%;&quot; /&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;img src=&quot;https://cdn.svgporn.com/logos/python.svg&quot; alt=&quot;react&quot; style=&quot;zoom:20%;&quot;&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;2-코드-하이라이팅-이미-생성-캡쳐&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EC%BD%94%EB%93%9C-%ED%95%98%EC%9D%B4%EB%9D%BC%EC%9D%B4%ED%8C%85-%EC%9D%B4%EB%AF%B8-%EC%83%9D%EC%84%B1-%EC%BA%A1%EC%B3%90&quot; aria-label=&quot;2 코드 하이라이팅 이미 생성 캡쳐 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 코드 하이라이팅 이미 생성 (캡쳐)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;https://carbon.now.sh&lt;/code&gt; &lt;a href=&quot;https://carbon.now.sh/&quot;&gt;링크&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;vscode extension 추천 &lt;code class=&quot;language-text&quot;&gt;CodeSnap&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;3-이미지-리사이징-및-컴프레싱&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%A6%AC%EC%82%AC%EC%9D%B4%EC%A7%95-%EB%B0%8F-%EC%BB%B4%ED%94%84%EB%A0%88%EC%8B%B1&quot; aria-label=&quot;3 이미지 리사이징 및 컴프레싱 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 이미지 리사이징 및 컴프레싱&lt;/h3&gt;
+&lt;p&gt;웹 기반으로 사용가능&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;https://squoosh.app/&lt;/code&gt; &lt;a href=&quot;https://squoosh.app/&quot;&gt;링크&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;4-이모지&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-%EC%9D%B4%EB%AA%A8%EC%A7%80&quot; aria-label=&quot;4 이모지 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. 이모지&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;맥 이모지 단축키&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;Ctrl+ ⌘ + space&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;확대 방법&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;&amp;lt;span style=&quot;zoom:300%;&quot; alt=&quot;&quot;&gt;🧑🏼‍💻&amp;lt;/span&gt;&lt;/code&gt;&lt;br&gt;
+&lt;span style=&quot;zoom:300%;&quot; alt=&quot;&quot;&gt;🧑🏼‍💻&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;오아시스-블로그-우측-toc-기능&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%EC%95%84%EC%8B%9C%EC%8A%A4-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B0%EC%B8%A1-toc-%EA%B8%B0%EB%8A%A5&quot; aria-label=&quot;오아시스 블로그 우측 toc 기능 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오아시스 블로그 우측 ToC 기능&lt;/h2&gt;
+&lt;h3 id=&quot;h1--h3까지만-표시-됩니다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#h1--h3%EA%B9%8C%EC%A7%80%EB%A7%8C-%ED%91%9C%EC%8B%9C-%EB%90%A9%EB%8B%88%EB%8B%A4&quot; aria-label=&quot;h1  h3까지만 표시 됩니다 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;h1 ~ h3까지만 표시 됩니다&lt;/h3&gt;
+&lt;h4&gt;heading4&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;#### heading4&lt;/code&gt;&lt;br&gt;
+h4 부터는 적용이 안된다!&lt;/p&gt;
+&lt;h5&gt;heading5&lt;/h5&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;##### heading5&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;이 글 원본 마크다운 파일
+&lt;a href=&quot;https://raw.githubusercontent.com/OasisBusiness/oasisbusiness.github.io/main/content/blog/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%EC%9E%91%EC%84%B1%EB%B2%95/index.md&quot;&gt;여기&lt;/a&gt;
+서 확인 하실 수 있습니다!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[딥러닝으로 재해석하는 빅데이터]]></title><description><![CDATA[딥러닝으로 재해석하는 빅데이터 기계학습이 가능한 프로그램에 인공 신경망을 사용하여 빅데이터를 학습하는 인공지능을 통해 우리는 빅데이터로부터 원하는 분석 결과를 얻을 수 있습니다. 데이터를 크롤링, Open API, FTP, RSS…]]></description><link>https://oasisbusiness.github.io/딥러닝으로 재해석하는 빅데이터/</link><guid isPermaLink="false">https://oasisbusiness.github.io/딥러닝으로 재해석하는 빅데이터/</guid><pubDate>Mon, 22 Feb 2021 07:26:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;딥러닝으로-재해석하는-빅데이터&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%94%A5%EB%9F%AC%EB%8B%9D%EC%9C%BC%EB%A1%9C-%EC%9E%AC%ED%95%B4%EC%84%9D%ED%95%98%EB%8A%94-%EB%B9%85%EB%8D%B0%EC%9D%B4%ED%84%B0&quot; aria-label=&quot;딥러닝으로 재해석하는 빅데이터 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;딥러닝으로 재해석하는 빅데이터&lt;/h1&gt;
+&lt;p&gt;기계학습이 가능한 프로그램에 인공 신경망을 사용하여 빅데이터를 학습하는 인공지능을 통해 우리는 빅데이터로부터 원하는 분석 결과를 얻을 수 있습니다.&lt;/p&gt;
+&lt;p&gt;데이터를 크롤링, Open API, FTP, RSS 등을 통해 수집한 빅데이터를 어떻게하면 원하는 곳에 필요한 정보로서 쓸 수 있을까요?&lt;/p&gt;
+&lt;p&gt;수집한 데이터들로 부터 쓸만한 정보를 추출해낼 수 있어야 열심히 모은 데이터들이 값어치가있다고 할 수 있겠죠?&lt;/p&gt;
+&lt;p&gt;적절한 특징을 잡아내어 한데 모아져있던 데이터들을 비슷한 데이터들끼리 분류합니다.&lt;/p&gt;
+&lt;h2 id=&quot;데이터-수집&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%88%98%EC%A7%91&quot; aria-label=&quot;데이터 수집 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데이터 수집&lt;/h2&gt;
+&lt;p&gt;데이터 구매, 공공데이터의 수집, 크롤링을 통한 배후지의 특성을 나타낼 수 있는 다양한 분야의 데이터를 수집합니다.&lt;/p&gt;
+&lt;h2 id=&quot;데이터-전처리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC&quot; aria-label=&quot;데이터 전처리 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데이터 전처리&lt;/h2&gt;
+&lt;p&gt;다양한 출처로 부터 얻은 데이터를 함께 사용 가능하도록 맞춰주는 작업과 수집한 데이터로부터의 새로운 값 재가공, 최적의 인공지능 모델을 가공하여 결측치 처리에 검증 및 활용, 다양한 항목중 학습에 필요한 항목을 선택, 입력변수를 줄이기 위한 차원 축소 작업을 합니다.&lt;/p&gt;
+&lt;h2 id=&quot;데이터-학습-매개변수-조정-데이터-재가공&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%95%99%EC%8A%B5-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98-%EC%A1%B0%EC%A0%95-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9E%AC%EA%B0%80%EA%B3%B5&quot; aria-label=&quot;데이터 학습 매개변수 조정 데이터 재가공 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데이터 학습, 매개변수 조정, 데이터 재가공&lt;/h2&gt;
+&lt;p&gt;전처리 작업을 한 데이터를 입력시켜 딥러닝 모델에 학습을 시킨뒤 나오는 결과의 편향과 분산을 확인하고 편향과 분산을 더 낮춰주기 위한 모델의 크기, 활성함수, 최적화 등의 작업을 합니다. 또한 모델이 데이터를 더 잘 활용할 수 있도록 다양한 모델의 가공 작업을 합니다.&lt;/p&gt;
+&lt;h2 id=&quot;결측처리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B2%B0%EC%B8%A1%EC%B2%98%EB%A6%AC&quot; aria-label=&quot;결측처리 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;결측처리&lt;/h2&gt;
+&lt;p&gt;업무과정중에 어려웠던 부분은 결측 처리부분이었습니다.&lt;/p&gt;
+&lt;p&gt;100만 단위의 데이터를 다루다보면 결측데이터가 있기 마련인데, 수백개의 항목중 한두개의 결측이 있다고 해서 데이터를 지우기엔 아깝기도 하고 가능한 많은 데이터를 확보하는 것이 DNN 모델 성능 향상에 큰 도움이 되기 때문에 이러한 결측을 처리하는 모델 혹은 알고리즘 확보가 우선이었습니다. 대표적인 결측 처리모델인 MICE, MissForest등을 테스트 해보았고 현재는 GAN (generative모델) 을 이용하여 높은 성능의 결측 처리를 하고있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 108px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1904925524135e5b106dda0a40f31918/8eb6e/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 224.07407407407405%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAtCAYAAACu/EtoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD8ElEQVRIx81W6U4iQRDmyY0vsCbGmOgLqKvxjwGVTdQIeACCggoeoMuh3DcMjBy189XYwwz0gJvNbraTTs1MVVfV1PF1OWhijUYjg5qfzdTMn5Rz2CmyOyDocDg0eOIZy2FnbZbndos9lAk0m03qdDrUaDSoVCpRvV63KFNVlXK5HFWrVea9vLxYPYTLg8GAPyqKQl6vl+7v7+nu7o52d3cpEomy8MfHB9O3tzfa3Nyk4+NjlnO73Wx8SuFgoNNgMMgbHtzc3PAhrH6/r8nqRq+urujy8pJarRbFYjGqVCq6wslfnhWjTwnjCcbFglPSpGC9v7+zdXh0cnLCcTQfAo1EIuzd4+MjFYtFedmIAxBeXFyk6+trWllZoUAgYPEIhvb29jgsoVCIHh4eDENSD5E5r9fHSdnf37d4KGTAS6fTHGOLh/Nj9nvLIX4Fv2HeKBFsVQXtS/jWjW9GDLvdLrXbnT/aaAQjht1u7/OjYtmtVpu3jIdtVajMVoh3/AqK3Y4PipAoSs9eobCIb7e3t1yP2Wx2SkZRulo1NOj5+Zny+QLzbT0UB9LpDCUSSa1syvxuVgjabLYYJCqVKvNNCuVJ6fVU/m2hbDoRinZWZb4lKTo4DJkKoEAZgKJ0QGUyZjlR9F8Gh682gLT1yuUynZ2dsfXTUw+/m8EBcujhfD5PyWRyPjj4/X5aWFigeDxOy8vLFnAQRoHSyH4gEGTEkYKDUJjJZOjw8JAb3+VyUaFQsIADNrwGiABo/z046KCgWqgcPMYgMgUOrda4tlBXKHb0sSj6yS2+6zWoF7u0UwDr5XKF44bvaKt2uz3VRcViiZ/1a7Yx2Sm6N/3+gK/HaDRKOzs79PNnitbX17USCTMPMqKHkaxYLM4VgVsPIIHQGQrRl7gi3e4ftL29zYpxZywtLVkUCk8PDg7o4uKCPB4PK55SKH65Wq1x2cC7XC5PqVSKw2AGBWyEBGWDWgS1BQcwAAqwiMYHnQRTkRQhqxuZAofx5CDKQgYOYgtQ0Mvor4DDyB4cCoUiD0ywjqALcDDLYN7BlPb09GQPDmIyOD8/p9XVVWNyQLbNkwPq0u8PMHiANxcckDmMaLhTnE6nBRwEBXC8vr5SOBw2+P8zOOiZlk4O88BBFPaXwQEtqINDkb8jPmZF4KOX0UVIDq7YRqNpDw5bW985g5j/cGhtbc3oZRzKZLLGmJxIJLRBwK8924AD8uN0urj2NjY2tAvqVAOHbxrMh1ghPK3V6px9n8/HKHN0dGQPDvAA4ADPMExiKkBpwJgZD2u1Gl9SCAs8hpGZ4AADaHpQGTiYhyQBDpakmCcBvYTGTS9AYHLL+CibX1sdfm14cy4rAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Image&quot;
+        title=&quot;Image&quot;
+        src=&quot;/static/1904925524135e5b106dda0a40f31918/8eb6e/1.png&quot;
+        srcset=&quot;/static/1904925524135e5b106dda0a40f31918/8eb6e/1.png 108w&quot;
+        sizes=&quot;(max-width: 108px) 100vw, 108px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그에 관한 내용과 실제 우리가 결측 채우는 모델을 사용한 결과의 성능을 보여줄수 있는 이미지를 캡쳐한 자료입니다&lt;/p&gt;
+&lt;p&gt;결측 처리 모델의 구성도 사진입니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 388px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ed40143badca050ce33fb580ad277106/96c67/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 144.5945945945946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAdCAIAAAAl5NuSAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEmklEQVQ4y32V+ZOqRhDH/f//hOSH5Le8Vy8adTeruxyKeOCJ6KqACiIeKKAi92kafZW8YytVU1PFTH+mu7/TPWTiOPlhRFEUR5FxtXa7nbLfG8Y1jJIwin+2zHyPxbfbbbNTqG73UMtSBFqpt3rd9r5eMOQFbEXfH/EDHIGFJnIC9nlIEUuiMK08EVRnSJSVtfh/cBpsmMIHSXivPM+wHI3mGSzPYVkMx9fyBrbCMP6W/w+GvThJZ0neNDvdbQdrN+pUs77poN12e72WYSu5G3wHw7cfhPr5wnEceLhajue4x8tV3m73u71uWLbr27YjrCR2xp5O5wDUS9IjMhDqlF8KvdqIRGqtzqRPqSNyyi94sjyslohme9SqqTQxYXmeLI0ogqS6XBMx5Dm4zHh+KFJI7y03QnM09oRjaAt7EZuvDP7EvGXH+BNJEBRW5smXHpJf1l8GNbSKlBbTMXjPeJ4/7DRHSLZTyvbR/BTPv+HEkGpO0b8GCAhW5PACTjaYLjVFc4NqaVYpUsjzbL70PC8TBOFRPxuqoh8Pc56X57Pdbn8xbfty2q7XG3njnvXLxTio2moOmnDGSTd0zbJsx3EzYRg9aiMV83a72p6qn4+q7gWhadlg5AeRqumqqjteYFluECVgDosgYQrDCPzAcyEQUD09yDRteXscMNN2n1ltlIthppcchLZt3+46f4WDIABIEMRarSbLGzgYIthrZrE2+1Tu/lHq5KrvnKQB7DiedjZ3RnAy7JW0hqAyPjgLo8ViUSwWV6vVI/6dahQALnX+ROnPbzS/1mHRtmzt6q1OvnKy1vI2hUGwR21C9cTpBGV0Ax22u4Owkk8GZOCPuS7W/FKl8kT7L2aKh2HghQmkkHq+t2AEpzh+mj/kdtLPpu0mX0W8Xa6qKM/mwgjmw2kbJonrh2nOAKf1vN72+wNxUB/0ulS3Ly2XV2nmWlfoBOjQ41HfyPvReMayC12WjJ1oOr5zh32AV/PZAH8WiSJTfa5XsQqOL5FPhrqH+htTBN1rTyYTpoGS9fqELKsj4mK66T1DbYPAR56Rqtl2vSLVCgL51CSQao3UNB3uTmm/8M3XSbuqtArvdBeKXJTWhunc4XuFLIRVgyQ0MteqExTyJOFfms3m+XwGLfrMmG28LipZstFiOX5I0wzDXO2750dngk6+BxkEMHRd3+2V3UG7mM7V9vfH9POg7EFeaMbUxvMd7y7Yt89Kks5pIJ550bn2ZlgVOojOUpa+f+ge+0EcpRaO/xOcjrTPb6CnUP5VRH9fIr8J5V8Mvp+ESWzZ8ft7vBRi8Gy7H8PgJLCvhjQ5sl2VbV/FoXM5fnXrerHjgo1rOT/CD/FOZwNeEmM5Ysd0fzQTREl571jHDfBQyRAYCGSbcM0fwYeNRGN5tgLvbrFXecFrjeHfn3YcA13PsSxND1iWlSQJGvYjz1tJquRo8pWvPQvV/Ljx9vqGzJeioigEQSAIimLYeDwG4w9geAmqjdaGKAzqlWadVMg8WcHkzTZtLNuBq3LTzvegfzI//4FgFV6QLVT0UdU0bXtQ4XeVJLd/HTxsYP4H8K4i9DmKiBcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Image&quot;
+        title=&quot;Image&quot;
+        src=&quot;/static/ed40143badca050ce33fb580ad277106/96c67/2.png&quot;
+        srcset=&quot;/static/ed40143badca050ce33fb580ad277106/12f09/2.png 148w,
+/static/ed40143badca050ce33fb580ad277106/e4a3f/2.png 295w,
+/static/ed40143badca050ce33fb580ad277106/96c67/2.png 388w&quot;
+        sizes=&quot;(max-width: 388px) 100vw, 388px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;em&gt;이미지 출처: GAIN: Missing Data Imputation using Generative Adversarial Nets&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;학습&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%95%99%EC%8A%B5&quot; aria-label=&quot;학습 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;학습&lt;/h2&gt;
+&lt;p&gt;기계학습을 위해 컴퓨터에 데이터를 입력합니다. 이때 레이블이 주어지거나 주어지지 않는 데이터 입력 방법에 따라 지도학습과 비지도학습으로 나뉩니다. 지도학습은 레이블이 주어지기때문에 원인이되는 데이터로부터 결과 데이터값이 나올 수 있는 매핑 함수를 찾는다고도 말할 수 있습니다. 반면 비지도학습은 레이블이 주어지지않기 때문에 컴퓨터가 스스로 입력된 데이터들간의 상관도를 비교 분석하여 유사 데이터들을 군집화합니다.&lt;/p&gt;
+&lt;p&gt;이렇게 학습에 사용되는 데이터를 학습데이터라고 하며 학습이 잘 이루어졌는지 테스트하는 데이터를 테스트 데이터라고 합니다. 이때, 테스트 데이터는 학습에 사용되지않은 데이터여야합니다.&lt;/p&gt;
+&lt;p&gt;한 번 모든 데이터에 대해 최적화를 진행하며 하는 학습을 배치 학습이라고 칭하며 전체 데이터세트를 적절한 배치 사이즈로 나누어 한번 일부 데이터만 학습하는 것은 미니 배치 학습이라고 합니다. 모든 데이터 세트를 학습하는 것을 1 에포크 라고 합니다.&lt;/p&gt;
+&lt;p&gt;즉, 모든 데이터가 100개고 미니배치 크기가 10개라면 1에포크는 10개씩 나뉘어진 데이터(미니배치)를 총 10번 학습하여야 완료됩니다.&lt;/p&gt;
+&lt;h3 id=&quot;은닉층&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%80%EB%8B%89%EC%B8%B5&quot; aria-label=&quot;은닉층 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;은닉층&lt;/h3&gt;
+&lt;p&gt;이렇게 입출력 데이터만을 이용하는 신경망으로는 선형분리만 가능하지만 비선형 분리는 불가능하게됩니다. 그래서 은닉층을 추가하여 보다 복잡한 분류를 가능하게합니다. 은닉층이 한개 이상 추가된 신경망을 MLP라고하며 여기서 은닉층이 더 추가되면 레이어가 깊다고 하여 DNN(Deep Neural Network)라고 합니다.&lt;/p&gt;
+&lt;h3 id=&quot;활성화-함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%99%9C%EC%84%B1%ED%99%94-%ED%95%A8%EC%88%98&quot; aria-label=&quot;활성화 함수 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;활성화 함수&lt;/h3&gt;
+&lt;p&gt;활성화 함수를 통해 인공신경망을 거친 값이 결과적으로 어떤 값이 될지를 결정합니다. MLP의 경우 주로 Sigmoid function을 사용하고 DNN의 경우 주로 ReLU function을 사용합니다. MLP에서 DNN으로 넘어오면서 활성화 함수를 ReLU function으로 바꾸는 이유는 바로 그래디언트 소멸 문제 때문입니다.&lt;/p&gt;
+&lt;p&gt;DNN이 MLP보다 은닉층이 많아지면서 출력층에서 계산된 그래디언트 값이 역전파되는 중에 점점 작아지다가 소멸되어 없어지는 문제가 발생합니다. 이는 MLP의 활성화 함수인 Sigmoid function때문인데요, Sigmoid function의 경우 값이 포화상태에 이르를 경우 기울기값이 0으로 초기화되는 특성이 있는데 DNN의 경우 다수의 은닉층으로 인해 0으로 수렴된 값이 역전파되어 결국 모든 값에 0이 곱해져 소멸되게됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 553px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/56b7b217c3154ecea3f5f661f4abd98d/74cfa/3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 43.24324324324324%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+klEQVQoz51SXWvDMAzM//9Hex97HZTBWEczRvKQ2iRNnKS283XzCVyyZoEygUgsyac7S4n3HsuyoKoqFEUBnmmM0ff+72PREq01xnFE27ao6xrOOUzTtLn4iAsggeZ5RlmWwrDvewH8jxE0McYIIJkRbBgG8aeXZ6iqZJU8A2OsG5xFo84w+gx/7TGHPHM3hlEyv1mWoes6AXj/SnExjTDXSskb+3CxCU0+D69I3w7o6ovUUhkxBNBaK52jUe5a8jpHc6E+PX7g+3SCt9et5HhgJ4Kz03oo95P9691+DUUFOQSg5DzPRXJkuLciS2C9t1YbyXv79ege/gBWV8GqF1O6wgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Image&quot;
+        title=&quot;Image&quot;
+        src=&quot;/static/56b7b217c3154ecea3f5f661f4abd98d/74cfa/3.png&quot;
+        srcset=&quot;/static/56b7b217c3154ecea3f5f661f4abd98d/12f09/3.png 148w,
+/static/56b7b217c3154ecea3f5f661f4abd98d/e4a3f/3.png 295w,
+/static/56b7b217c3154ecea3f5f661f4abd98d/74cfa/3.png 553w&quot;
+        sizes=&quot;(max-width: 553px) 100vw, 553px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;역전파&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%97%AD%EC%A0%84%ED%8C%8C&quot; aria-label=&quot;역전파 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;역전파&lt;/h3&gt;
+&lt;p&gt;그래디언트값이 역전파된다는게 뭘까요? 주어진 입력으로부터 출력이 계산되는 것을 순방향 계산이라고 합니다. 순방향으로 계산된 출력값과 원하는 출력값의 격차를 줄이기 위해 발생한 오차를 역방향으로 전파하여 가중치 변경을 통해 오차를 줄여나가는 것을 역전파 알고리즘이라고합니다. (하나의 층에서 다른 층으로 값이 전달될 때 연결 가중치를 통해서 전달됨)&lt;/p&gt;
+&lt;p&gt;출력층에서 계산된 오차로부터 은닉층의 오차를 계산하여 해당 값을 입력층으로 역전파시켜 출력층이 정확해질때까지 반복합니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 376px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8fa23ca14bdeff3398a27d7b3e5043fa/d38a6/4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAACVUlEQVQ4y6VVz2sTQRTuv+TJ/0ME8eJZ8OLFm14KQu3FiwcpVG08KJVSpFYRxB+gB0utbQombZPUtFWrm7TpJjOzuzOzn29mneyPrJDqwCPZN+99+73vzbydAK04jvG/y2FMuD9KKkRhNGJhEKJa3USz0YSMZG7PPLMBtzEOdAgY0WbAAwSixBglFX0Ua0B7RycWdAg4Tsmf6m20vnvjleweysys9mEHV6YrmH64jEhKaK0pIZ+jdTxachbYrFCSflEETvq8Xv2CjZ09CxaEoQUuVpZnSKaVGm4GUQLm3pxdDtTsO6BBUUN20kP3YA+CMQomViS6LY2Wd+zj5v0lVJ5/sD5nA56A3JtbxMVL11Df2k0Zsh4B7rfB+n0wIWyCpGOkiPVht4fJ2ad48Ow9pJKWnSS/ORWaGM3MPsG5C1dR22o5wLQsE+DKEfSrMjK4ZXxmz1mx05ZhFAS2bE7sXKBhaZOpKe/W6ths7P/paNJlw1DFGmsbNTyefwHfH6Ql+10Pv1oNdDoedVdSuXQDSEeT2f7h4fKtOUxVkmNjus+JgGvKjck7OHP2PD6uVFNAGYXgvm+BTIfdEYipy0aG1douGgc/rc9oa/YNuNQK2ztfsbT8FpyL/F3O6mDebhNkomFI5dk4MkUlJ0yTppRqWLwdlgnpp4nBN+8I1+8uYGbxTQJEL8s2y2k9Mm3+dvWOSezbj15i/tVK6o9RGjv2cIj/ZR66MRSKMDemBI0pTuNLMFE+3sjnJMgNB9ZnNqA4QI1v/fM6ms3WyIB1ppU+Xcmn+QT8BqsDDCEEG9wvAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Image&quot;
+        title=&quot;Image&quot;
+        src=&quot;/static/8fa23ca14bdeff3398a27d7b3e5043fa/d38a6/4.png&quot;
+        srcset=&quot;/static/8fa23ca14bdeff3398a27d7b3e5043fa/12f09/4.png 148w,
+/static/8fa23ca14bdeff3398a27d7b3e5043fa/e4a3f/4.png 295w,
+/static/8fa23ca14bdeff3398a27d7b3e5043fa/d38a6/4.png 376w&quot;
+        sizes=&quot;(max-width: 376px) 100vw, 376px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[GATSBY: OUR BLOG]]></title><description><![CDATA[안녕하세요! 오늘은 오아시스 블로그를 개설하면서 이용한 gatsby에 대해 알아보도록 하겠습니다. What is Gatsby? 페이지 생성에는 여러가지 방식이있다. SSR 방식 페이지 접근 시 DB에서 정보를 받아와 HTML 생성 CSR 방식 API…]]></description><link>https://oasisbusiness.github.io/GATSBY: OUR BLOG/</link><guid isPermaLink="false">https://oasisbusiness.github.io/GATSBY: OUR BLOG/</guid><pubDate>Wed, 27 Jan 2021 07:26:03 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요!&lt;br&gt;
+오늘은 오아시스 블로그를 개설하면서 이용한 gatsby에 대해 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;h2 id=&quot;what-is-gatsby&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#what-is-gatsby&quot; aria-label=&quot;what is gatsby permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What is Gatsby?&lt;/h2&gt;
+&lt;p&gt;페이지 생성에는 여러가지 방식이있다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;SSR 방식&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;페이지 접근 시 DB에서 정보를 받아와 HTML 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CSR 방식&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;API로 페이지 정보를 받아와 HTML 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;원하는 시점에 빌드하여 페이지 생성&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;배포시점에 모든 페이지 정보들이 생성되어 별도의 앱서버가 필요 없음&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;이 중 Gatsby는 3번 방식을 이용하여 페이지를 생성합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GraphQL를 통해 빌드 시점에 정적 페이지를 생성하는 Gatsby JS&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Gatsby is a React-based open source framework with performance, scalability and security built-in.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;즉, Gatsby는 리액트 기반의 오픈 소스 프레임워크로,&lt;br&gt;
+graphQL을 통해 가져온 정보들을 HTML, CSS, React로 만들어진 컴포넌트 UI와 연결하여 사이트로 생성합니다.&lt;/p&gt;
+&lt;h2 id=&quot;how-to-use&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#how-to-use&quot; aria-label=&quot;how to use permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How to use?&lt;/h2&gt;
+&lt;h3 id=&quot;gatsby-설치하고-실행하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#gatsby-%EC%84%A4%EC%B9%98%ED%95%98%EA%B3%A0-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0&quot; aria-label=&quot;gatsby 설치하고 실행하기 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Gatsby 설치하고 실행하기&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Gatsby CLI 이용하기&lt;br&gt;
+Gatsby CLI는 Webpack, Reachjs, React-route 등을 포함하고 있으므로 간단히 이용할 수 있도록 도와줍니다.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;npm install --global gatsby-cli&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gatsby로 새 프로젝트 생성하기&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;gatsby new 프로젝트명&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;해당 프로젝트로 이동하기&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;cd 프로젝트 폴더명&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gatsby 개발모드로 시작하기&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;gatsby develop&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;구조-파악하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%AC%EC%A1%B0-%ED%8C%8C%EC%95%85%ED%95%98%EA%B8%B0&quot; aria-label=&quot;구조 파악하기 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;구조 파악하기&lt;/h3&gt;
+&lt;p&gt;설치 및 개발 준비가 끝났다면 전체적인 구조를 살펴보겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;설정 파일&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;gatsby-config.js&lt;br&gt;
+Gatsby의 기본 구성 파일로 사이트 제목, 설명, 플러그인 등 사이트 메타 데이터를 지정합니다.&lt;/li&gt;
+&lt;li&gt;gatsby-browser.js&lt;br&gt;
+Gatsby 브라우저 API를 사용할 경우 사용합니다.&lt;/li&gt;
+&lt;li&gt;gatsby-node.js&lt;br&gt;
+Gatsby 노드 API를 사용할 경우 해당하는 사용법을 정의합니다.&lt;/li&gt;
+&lt;li&gt;gatsby-ssr.js&lt;br&gt;
+Gatsby 서버 사이드 렌더링 API를 사용하는 경우 해당하는 사용법을 정의합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;프로젝트 구조&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;/public: gatsby build의 Output이 위치한다.&lt;/p&gt;
+&lt;p&gt;/plugins: npm에 포함되지 않은 라이브러리나 플러그인을 넣는다.&lt;/p&gt;
+&lt;p&gt;/src/pages: 파일 이름 및 폴더 이름을 경로로하여 따라간다.&lt;/p&gt;
+&lt;p&gt;/src/components: 컴포넌트들을 모아둔 폴더&lt;/p&gt;
+&lt;p&gt;/src/images: 이미지들을 모아둔 폴더&lt;/p&gt;
+&lt;p&gt;/static: 저장된 파일을 Webpack에서 처리하지 않고 공용 폴더에 복사되는 폴더가 존재한다.&lt;/p&gt;
+&lt;h1 id=&quot;&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#&quot; aria-label=&quot; permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;구조를 모두 파악했다면, 이제 블로그를 만들 수 있습니다!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;lets-make-blog-with-gatsby&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#lets-make-blog-with-gatsby&quot; aria-label=&quot;lets make blog with gatsby permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Let’s make Blog with Gatsby&lt;/h1&gt;
+&lt;h2 id=&quot;write-post---markdown&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#write-post---markdown&quot; aria-label=&quot;write post   markdown permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Write Post - Markdown&lt;/h2&gt;
+&lt;p&gt;Gatsby 블로그에서는 post를 markdown을 이용해 작성합니다.
+markdown은 사용되는 폭이 넓기때문에 재사용하기가 편리합니다.&lt;/p&gt;
+&lt;p&gt;Markdown 파일을 읽어 정적 HTML로 만들기 위해서는,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;‘gatsby-source-filesystem’로 마크다운 파일 읽어들이기&lt;/li&gt;
+&lt;li&gt;‘gatsby-transform-remark’로 마크다운 파일 해석하기&lt;/li&gt;
+&lt;li&gt;해석한 데이터를 GraphQL로 가져오기&lt;/li&gt;
+&lt;li&gt;가져온 정보를 미리 설정해둔 템플릿에 배치하기&lt;/li&gt;
+&lt;li&gt;Gatsby의 createPageAPI를 이용해 정적페이지 만들기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;의 절차를 거칩니다.&lt;/p&gt;
+&lt;h3 id=&quot;세팅하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%B8%ED%8C%85%ED%95%98%EA%B8%B0&quot; aria-label=&quot;세팅하기 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;세팅하기&lt;/h3&gt;
+&lt;p&gt;해당 절차 중 &lt;code class=&quot;language-text&quot;&gt;&apos;gatsby-source-filesystem&apos;&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;&apos;gatsby-transform-remark&apos;&lt;/code&gt;는 gatsby 플러그인으로써 gatsby-config.js에 세팅해야합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/gatsby-config.js
+
+plugins: [
+ {
+ resolve: `gatsby-source-filesystem`,
+ options: {
+ name: `markdown-pages`,
+ path: `${__dirname}/src/마크다운 파일의 폴더`,
+   },
+ },
+ `gatsby-transformer-remark`,
+]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;템플릿을-이용하여-마크다운을-html로-변경하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%85%9C%ED%94%8C%EB%A6%BF%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%EC%9D%84-html%EB%A1%9C-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0&quot; aria-label=&quot;템플릿을 이용하여 마크다운을 html로 변경하기 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;템플릿을 이용하여 마크다운을 HTML로 변경하기&lt;/h3&gt;
+&lt;p&gt;GraphQL을 이용해 가져온 마크다운 데이터 정보를 템플릿을 통해 HTML파일로 재정의하도록 도와줍니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/gatsby-config.js
+import React from &quot;react&quot;
+import { graphql } from &quot;gatsby&quot;
+
+export default function Template({data}) {
+  const { markdownRemark: { frontmatter, html } } = data;
+  return (
+    &amp;lt;div&gt;
+        &amp;lt;h1&gt;{frontmatter.title}&amp;lt;/h1&gt;
+        &amp;lt;h2&gt;{frontmatter.date}&amp;lt;/h2&gt;
+        &amp;lt;div
+          dangerouslySetInnerHTML={{ __html: html }}
+        /&gt;
+    &amp;lt;/div&gt;
+  )
+}
+
+export const pageQuery = graphql`
+  query($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
+      frontmatter {
+        date(formatString: &quot;YYYY년 MM월 DD일 &quot;)
+        path
+        title
+      }
+    }
+  }
+`&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;템플릿을-정적-html로-만들기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%85%9C%ED%94%8C%EB%A6%BF%EC%9D%84-%EC%A0%95%EC%A0%81-html%EB%A1%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0&quot; aria-label=&quot;템플릿을 정적 html로 만들기 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;템플릿을 정적 HTML로 만들기&lt;/h3&gt;
+&lt;p&gt;Node.js API를 이용하여 정적페이지를 만들기때문에 gatsby-node.js에 세팅이 필요합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const path = require(&quot;path&quot;)
+
+exports.createPages = ({ actions, graphql }) =&gt; {
+  const { createPage } = actions
+
+  const blogPostTemplate = path.resolve(`템플릿 파일`)
+
+  return graphql(`
+    {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `).then(result =&gt; {
+    if (result.errors) {
+      return Promise.reject(result.errors)
+    }
+
+    result.data.allMarkdownRemark.edges.forEach(({ node }) =&gt; {
+      createPage({
+        path: node.frontmatter.path,
+        component: blogPostTemplate,
+        context: {},
+      })
+    })
+  })
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;GraphQL의 allMarkdownRemark가 모든 마크다운을 읽어오면 edges 각각의 node( markdown ) 정보가 들어에가고 이를 createPage에서 템플릿과 합성하여 실제 정적 파일을 생성합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;result.data.allMarkdownRemark.edges.forEach(({ node })&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;frontmatter로-전해지는-정보&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#frontmatter%EB%A1%9C-%EC%A0%84%ED%95%B4%EC%A7%80%EB%8A%94-%EC%A0%95%EB%B3%B4&quot; aria-label=&quot;frontmatter로 전해지는 정보 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;frontmatter로 전해지는 정보&lt;/h3&gt;
+&lt;p&gt;그렇다면 frontmatter로 전해지는 정보는 어떻게 전달되는걸까?&lt;br&gt;
+바로 각 Markdown post 상단에 GraphQL이 인식할 수 있는 형식으로 정보를 작성하면됩니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;---
+path: &quot;url&quot;
+date: &quot;생성 일자&quot;
+title: &quot;타이틀 정보&quot;
+---&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;정보는 ---로 감싸도록하고 path정보를 꼭 작성해야합니다.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;이제 모든 블로그 작성 준비가 끝났습니다.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;이렇게 알아본 방법으로 여러분도 gatsby를 이용해 자신만의 독창적인 블로그를 만들 수 있습니다!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h6&gt;, &lt;a href=&quot;https://pks2974.medium.com/gatsby-%EB%A1%9C-blog-%EB%A7%8C%EB%93%A4%EA%B8%B0-ac3eed48e068&quot;&gt;참조 사이트: 박성룡, “gatsby”&lt;/a&gt;&lt;/h6&gt;</content:encoded></item></channel></rss>
